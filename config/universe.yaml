@@ -1,0 +1,122 @@
+permian_universe:
+  # ── Active as of 2026 Q2 ──────────────────────────────────────────────────
+  - ticker: FANG
+    name: Diamondback Energy
+    cik: "0001539838"
+    permian_exposure: 1.00
+    start_date: "2012-10-12"
+    end_date: null
+
+  - ticker: CTRA
+    name: Coterra Energy
+    cik: "0000858470"
+    permian_exposure: 0.55
+    start_date: "2021-10-01"
+    end_date: null
+
+  - ticker: MTDR
+    name: Matador Resources
+    cik: "0001520006"
+    permian_exposure: 1.00
+    start_date: "2014-01-01"
+    end_date: null
+
+  - ticker: PR
+    name: Permian Resources
+    cik: "0001658566"
+    permian_exposure: 1.00
+    start_date: "2022-09-01"
+    end_date: null
+
+  - ticker: OVV
+    name: Ovintiv
+    cik: "0001792580"
+    permian_exposure: 0.50
+    start_date: "2020-01-24"
+    end_date: null
+
+  - ticker: APA
+    name: APA Corporation
+    cik: "0001841666"
+    permian_exposure: 0.55
+    start_date: "2021-03-01"
+    end_date: null
+
+  - ticker: EOG
+    name: EOG Resources
+    cik: "0000821189"
+    permian_exposure: 0.50
+    start_date: "2014-01-01"
+    end_date: null
+
+  # CRGY absorbed VTLE (Vital Energy) on 2025-12-15; Permian exposure increased
+  # from ~0.40 (Eagle Ford/Uinta/Permian mix) to ~0.60 post-merger.
+  # Static value reflects combined entity as of close.
+  - ticker: CRGY
+    name: Crescent Energy (incl. Vital Energy post-2025-12-15)
+    cik: "0001866175"
+    permian_exposure: 0.60
+    start_date: "2021-12-08"
+    end_date: null
+
+  # SM absorbed CIVI (Civitas Resources) on 2026-01-30; Permian exposure
+  # diluted slightly by CIVI's DJ Basin assets (~50% blended post-merger).
+  - ticker: SM
+    name: SM Energy (incl. Civitas Resources post-2026-01-30)
+    cik: "0000893538"
+    permian_exposure: 0.50
+    start_date: "2014-01-01"
+    end_date: null
+
+  # ── Acquired / delisted — historical scoring only ─────────────────────────
+  # VTLE: Laredo Petroleum renamed to Vital Energy on 2023-01-10;
+  # acquired by Crescent Energy (CRGY) on 2025-12-15.
+  - ticker: VTLE
+    name: Vital Energy (fka Laredo Petroleum)
+    cik: "0001528129"
+    permian_exposure: 1.00
+    start_date: "2014-01-01"
+    end_date: "2025-12-15"
+
+  # CIVI: Civitas Resources; acquired by SM Energy on 2026-01-30.
+  - ticker: CIVI
+    name: Civitas Resources
+    cik: "0001509589"
+    permian_exposure: 0.45
+    start_date: "2021-11-01"
+    end_date: "2026-01-30"
+
+  # PXD: Acquired by ExxonMobil on 2024-05-03.
+  - ticker: PXD
+    name: Pioneer Natural Resources
+    cik: "0001038357"
+    permian_exposure: 1.00
+    start_date: "2014-01-01"
+    end_date: "2024-05-03"
+
+  # CPE: Callon Petroleum acquired by APA Corporation on 2024-04-01.
+  - ticker: CPE
+    name: Callon Petroleum
+    cik: "0000928054"
+    permian_exposure: 1.00
+    start_date: "2014-01-01"
+    end_date: "2024-04-01"
+
+  # CXO: Concho Resources acquired by ConocoPhillips on 2021-01-15.
+  - ticker: CXO
+    name: Concho Resources
+    cik: "0001358071"
+    permian_exposure: 1.00
+    start_date: "2014-01-01"
+    end_date: "2021-01-15"
+
+benchmarks:
+  sector_etf: XOP
+  broad_index: SPY
+  commodity: "CL=F"
+
+backtest:
+  start_date: "2014-01-01"
+  end_date: "2026-03-31"   # updated to include Q1 2026 (last complete quarter)
+  rebalance_frequency: quarterly
+  lookback_for_scoring: 4

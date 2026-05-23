@@ -1,0 +1,9 @@
+ticker,unit_economics_score,capital_discipline_score,balance_sheet_score,hedge_book_score,reserves_score,operational_score,sentiment_score,macro_sensitivity_score,caligula_score,tier,quarter
+FANG,,,,,,,,0.375,0.03375,D,2019-12-31
+MTDR,,,,,,,,0.5,0.045,D,2019-12-31
+EOG,,,,,,,,0.375,0.03375,D,2019-12-31
+SM,,,,,,,,0.25,0.0225,D,2019-12-31
+PXD,,,,,,,,,,,2019-12-31
+CPE,,,,,,,,,,,2019-12-31
+LPI,,,,,,,,,,,2019-12-31
+CXO,,,,,,,,,,,2019-12-31

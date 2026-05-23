@@ -1,0 +1,113 @@
+# Caligula Strategy A — 8-pillar systematic framework
+# Unlocks premium diligence metrics: Hedge Book, Reserve Life, and geological Unit Economics
+
+pillars:
+  unit_economics:
+    weight: 18
+    metrics:
+      fd_cost_per_boe_3yr: 6
+      cash_opex_per_boe: 4
+      breakeven_wti_10pct_irr: 5
+      recycle_ratio: 3
+
+  capital_discipline:
+    weight: 15
+    metrics:
+      capex_to_dda: 4
+      fcf_yield_ttm: 4
+      capital_return_yield: 4
+      buyback_timing_quality: 3
+
+  balance_sheet:
+    weight: 14
+    metrics:
+      net_debt_to_ebitdax: 4
+      interest_coverage: 3
+      debt_maturity_3yr_pct: 3
+      liquidity_to_annual_capex: 4
+
+  hedge_book:
+    weight: 12
+    metrics:
+      pct_oil_hedged_ntm: 4
+      hedge_floor_vs_strip: 4
+      hedge_instrument_quality: 4
+
+  reserves:
+    weight: 12
+    metrics:
+      pd_to_total_proved: 3
+      reserve_replacement_3yr: 3
+      tier1_inventory_years: 4
+      pv10_to_ev: 2
+
+  operational:
+    weight: 10
+    metrics:
+      prod_growth_debt_adj_share: 4
+      well_productivity_trend: 3
+      rig_count_trajectory: 3
+
+  sentiment:
+    weight: 10
+    metrics:
+      insider_net_buying_6mo: 3
+      institutional_ownership_change: 2
+      short_interest_relative: 2
+      options_put_call_skew: 2
+      analyst_revision_breadth: 1
+
+  macro_sensitivity:
+    weight: 9
+    metrics:
+      downside_beta_wti: 3
+      realized_vol_relative: 2
+      gdelt_basin_sentiment: 2
+      drawdown_recovery_halflife: 2
+
+metric_direction:
+  # Unit Economics
+  fd_cost_per_boe_3yr: -1
+  cash_opex_per_boe: -1
+  breakeven_wti_10pct_irr: -1
+  recycle_ratio: 1
+  # Capital Discipline
+  capex_to_dda: -1
+  fcf_yield_ttm: 1
+  capital_return_yield: 1
+  buyback_timing_quality: 1
+  # Balance Sheet
+  net_debt_to_ebitdax: -1
+  interest_coverage: 1
+  debt_maturity_3yr_pct: -1
+  liquidity_to_annual_capex: 1
+  # Hedge Book
+  pct_oil_hedged_ntm: 1
+  hedge_floor_vs_strip: 1
+  hedge_instrument_quality: 1
+  # Reserves
+  pd_to_total_proved: 1
+  reserve_replacement_3yr: 1
+  tier1_inventory_years: 1
+  pv10_to_ev: 1
+  # Operational
+  prod_growth_debt_adj_share: 1
+  well_productivity_trend: 1
+  rig_count_trajectory: 1
+  # Sentiment
+  insider_net_buying_6mo: 1
+  institutional_ownership_change: 1
+  short_interest_relative: -1
+  options_put_call_skew: -1
+  analyst_revision_breadth: 1
+  # Macro Sensitivity
+  downside_beta_wti: -1
+  realized_vol_relative: -1
+  gdelt_basin_sentiment: 1
+  drawdown_recovery_halflife: -1
+
+tiers:
+  A: [0.70, 1.00]
+  B: [0.55, 0.699]
+  C: [0.40, 0.549]
+  D: [0.00, 0.399]
