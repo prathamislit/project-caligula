@@ -558,6 +558,14 @@
                 document.getElementById('dd-history-chart-container').innerHTML = `<div class="td-sub" style="text-align:center; padding:40px;">Quality evolutionary trends will populate here.</div>`;
             }
 
+            // Render Quantamental Standing Executive Summary Card
+            if (data.narratives && data.narratives.summary) {
+                document.getElementById('dd-narrative-summary').textContent = data.narratives.summary;
+                document.getElementById('dd-narrative-card').style.display = 'block';
+            } else {
+                document.getElementById('dd-narrative-card').style.display = 'none';
+            }
+
             // Populate Metrics Ledger
             const tbody = document.getElementById('dd-metrics-tbody');
             let metricsHtml = '';
@@ -588,15 +596,37 @@
                     }
                 }
 
+                const pillarNarrative = (data.narratives && data.narratives[key]) ? data.narratives[key] : 'Operational metrics track standard peer expectation bounds.';
+
                 metricsHtml += `
-                    <tr>
-                        <td style="font-weight: 500;">${PILLAR_LABELS[idx]}</td>
+                    <tr class="drawer-row" onclick="toggleLedgerDrawer(this, 'drawer-${idx}')">
+                        <td style="font-weight: 500;">
+                            ${PILLAR_LABELS[idx]} <span class="toggle-arrow" id="arrow-${idx}">▼</span>
+                        </td>
                         <td class="td-sub">${valDesc}</td>
                         <td class="${scoreClass}" style="font-family: var(--mono);">${score.toFixed(2)}</td>
+                    </tr>
+                    <tr id="drawer-${idx}" class="accordion-drawer-row" style="display: none;">
+                        <td colspan="3" class="accordion-drawer">
+                            ${pillarNarrative}
+                        </td>
                     </tr>
                 `;
             });
             tbody.innerHTML = metricsHtml;
+
+            // Define dynamic drawer toggle helper globally
+            window.toggleLedgerDrawer = function(rowElement, drawerId) {
+                const drawer = document.getElementById(drawerId);
+                const arrow = rowElement.querySelector('.toggle-arrow');
+                if (drawer.style.display === 'none') {
+                    drawer.style.display = 'table-row';
+                    if (arrow) arrow.classList.add('open');
+                } else {
+                    drawer.style.display = 'none';
+                    if (arrow) arrow.classList.remove('open');
+                }
+            };
 
         } catch (err) {
             console.error(err);

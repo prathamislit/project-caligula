@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT))
 from src.utils.config import DATA_DIR, load_universe
 from src.pillars.general_corporate import score_general_corporate
 from src.backtest.portfolio_engine import performance_stats
+from src.narrative.generator import get_general_narratives, get_ep_gemini_narratives
 
 app = FastAPI(
     title="CALIGULA · Research Serverless API",
@@ -92,11 +93,13 @@ def analyze(ticker: str = Query(..., description="Stock symbol to score")):
     # 1. Attempt to fetch E&P study history if available
     history = get_permian_history(ticker_clean)
     if history:
+        narratives = get_ep_gemini_narratives(history[-1])
         return {
             "type": "ep_study",
             "ticker": ticker_clean,
             "latest": history[-1],
-            "history": history
+            "history": history,
+            "narratives": narratives
         }
 
     # 2. Dynamic scoring fallback for general corporate tickers
@@ -151,11 +154,14 @@ def analyze(ticker: str = Query(..., description="Stock symbol to score")):
             
         history_records.append(latest_record)
 
+        narratives = get_general_narratives(latest_record)
+
         return {
             "type": "general_corp",
             "ticker": ticker_clean,
             "latest": latest_record,
-            "history": history_records
+            "history": history_records,
+            "narratives": narratives
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Analysis failed for {ticker_clean}: {e}")

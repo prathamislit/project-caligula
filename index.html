@@ -289,6 +289,57 @@ tr:hover td{background:rgba(184,146,42,.04)}
 
 /* print */
 @media print{nav,.top-disclaimer,.hero-actions,.nav-cta{display:none}body{background:#fff}.view{display:block!important}}
+
+/* narrative and ledger drawer styles */
+.narrative-card {
+  background: rgba(184, 146, 42, 0.03);
+  border: 1px solid rgba(184, 146, 42, 0.16);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+.narrative-hdr {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--go);
+  margin-bottom: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.narrative-body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.drawer-row {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.drawer-row:hover {
+  background-color: rgba(184, 146, 42, 0.03);
+}
+.accordion-drawer {
+  background-color: rgba(184, 146, 42, 0.02);
+  border-top: 1px solid rgba(184, 146, 42, 0.08);
+  border-bottom: 1px solid rgba(184, 146, 42, 0.08);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ash);
+  padding: 16px 24px;
+}
+.toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  margin-left: 6px;
+  color: var(--go);
+  font-size: 10px;
+}
+.toggle-arrow.open {
+  transform: rotate(180deg);
+}
 </style>
 </head>
 <body>
@@ -734,6 +785,12 @@ tr:hover td{background:rgba(184,146,42,.04)}
       <!-- Metric Stat Strip -->
       <div class="stat-strip" id="dd-stat-strip" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 48px;">
         <!-- Populated dynamically -->
+      </div>
+
+      <!-- Quantamental Standing Card -->
+      <div class="narrative-card" id="dd-narrative-card" style="display:none;">
+        <div class="narrative-hdr">📖 Quantamental Strategic Standing</div>
+        <div class="narrative-body" id="dd-narrative-summary"></div>
       </div>
 
       <!-- Visual breakdown and ledger split -->
