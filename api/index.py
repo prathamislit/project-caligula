@@ -6,6 +6,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import numpy as np
+import math
 from pathlib import Path
 import sys
 import os
@@ -125,7 +126,6 @@ def analyze(ticker: str = Query(..., description="Stock symbol to score")):
             "quarter": "Trailing LTM"
         }
         # Generate a realistic 8-quarter historical evolution path deterministically
-        import math
         history_records = []
         quarters_list = ["2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3"]
         
