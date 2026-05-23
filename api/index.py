@@ -78,6 +78,7 @@ def get_permian_history(ticker: str) -> list:
 def read_root():
     return {
         "status": "healthy",
+        "version": "2.1.0-fallback",
         "service": "CALIGULA · Research API",
         "endpoints": ["/api/universe", "/api/analyze?ticker=<SYMBOL>"]
     }
