@@ -1,0 +1,15 @@
+venv/
+.git/
+.gitignore
+.env
+.env.template
+.pytest_cache/
+.ipynb_checkpoints/
+data/raw/
+data/processed/
+tests/
+notebooks/
+docs/
+archive_v1/
+requirements-dev.txt
+*.DS_Store
