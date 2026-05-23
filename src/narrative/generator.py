@@ -499,6 +499,15 @@ def get_ep_gemini_narratives(data: dict) -> dict:
         else:
             print(f"WARN: Gemini API returned status {res.status_code}. Details: {res.text}")
             return get_ep_deterministic_fallback(data)
+    except requests.exceptions.Timeout as e:
+        print(f"WARN: Gemini API call timed out: {e}. Falling back to deterministic E&P matrix.")
+        return get_ep_deterministic_fallback(data)
+    except requests.exceptions.RequestException as e:
+        print(f"WARN: Gemini API network request failed: {e}. Falling back to deterministic E&P matrix.")
+        return get_ep_deterministic_fallback(data)
+    except json.JSONDecodeError as e:
+        print(f"WARN: Gemini API returned invalid JSON: {e}. Falling back to deterministic E&P matrix.")
+        return get_ep_deterministic_fallback(data)
     except Exception as e:
-        print(f"WARN: Gemini API call failed: {e}. Falling back to deterministic E&P matrix.")
+        print(f"WARN: Gemini API general failure: {e}. Falling back to deterministic E&P matrix.")
         return get_ep_deterministic_fallback(data)
