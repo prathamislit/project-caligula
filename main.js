@@ -558,12 +558,14 @@
                 document.getElementById('dd-history-chart-container').innerHTML = `<div class="td-sub" style="text-align:center; padding:40px;">Quality evolutionary trends will populate here.</div>`;
             }
 
-            // Render Quantamental Standing Executive Summary Card
-            if (data.narratives && data.narratives.summary) {
-                document.getElementById('dd-narrative-summary').textContent = data.narratives.summary;
-                document.getElementById('dd-narrative-card').style.display = 'block';
-            } else {
-                document.getElementById('dd-narrative-card').style.display = 'none';
+            // Render Quantamental Standing Executive Summary Card safely (defensive against cached HTML)
+            const narrativeCard = document.getElementById('dd-narrative-card');
+            const narrativeSummary = document.getElementById('dd-narrative-summary');
+            if (narrativeCard && narrativeSummary && data.narratives && data.narratives.summary) {
+                narrativeSummary.textContent = data.narratives.summary;
+                narrativeCard.style.display = 'block';
+            } else if (narrativeCard) {
+                narrativeCard.style.display = 'none';
             }
 
             // Populate Metrics Ledger
