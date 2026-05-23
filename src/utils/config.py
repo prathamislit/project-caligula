@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 import yaml
+import typing
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -21,7 +22,16 @@ def load_weights():
         return yaml.safe_load(f)
 
 
-def env(key: str, required: bool = True) -> str:
+def env(key: str, required: bool = True) -> typing.Optional[str]:
+    """Helper to load environment variables defensively.
+    
+    Args:
+        key: The configuration key to fetch.
+        required: If True, raises ValueError if the variable is missing or empty.
+        
+    Returns:
+        The string value of the environment variable, or None if not required and missing.
+    """
     val = os.getenv(key)
     if required and not val:
         raise ValueError(f"Missing env var: {key}")
