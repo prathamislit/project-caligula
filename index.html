@@ -832,6 +832,68 @@ tr:hover td{background:rgba(184,146,42,.04)}
         </div>
       </div>
 
+      <!-- EOG DCF PLATE II.5 OVERLAY (Hidden by default, displayed only when EOG is queried) -->
+      <div id="eog-dcf-plate" style="display: none; margin-top: 48px; border-top: 1px solid rgba(17,16,8,.1); padding-top: 48px; animation: fade .4s ease;">
+        <div class="sec-label" style="margin-bottom: 24px; color: var(--go);">diligence overlay</div>
+        <div style="margin-bottom: 32px;">
+          <h1 style="font-size: 26px; font-weight: 500; margin-bottom: 6px; letter-spacing: -0.01em;">PLATE II.5 / DCF OVERLAY / EOG Resources Valuation Test</h1>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; color: var(--ash); text-transform: uppercase;">
+            Audit-Traceable Three-Statement DCF Model & Matrix
+          </p>
+        </div>
+
+        <!-- 4-Quadrant Stat Block -->
+        <div class="stat-strip" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 40px;">
+          <div class="stat-cell" style="border-left-color: var(--go);">
+            <div class="stat-num">$149.60</div>
+            <div class="stat-key">Intrinsic Price (RL)</div>
+          </div>
+          <div class="stat-cell" style="border-left-color: var(--ink);">
+            <div class="stat-num">+5.9%</div>
+            <div class="stat-key">Implied Upside</div>
+          </div>
+          <div class="stat-cell" style="border-left-color: var(--go);">
+            <div class="stat-num">8.77%</div>
+            <div class="stat-key">Weighted WACC</div>
+          </div>
+          <div class="stat-cell" style="border-left-color: var(--ink);">
+            <div class="stat-num">$68.50</div>
+            <div class="stat-key">Implied Breakeven WTI</div>
+          </div>
+        </div>
+
+        <!-- Method Narrative -->
+        <div class="editorial-split" style="margin-bottom: 48px;">
+          <div>
+            <h2 style="font-size: 22px; font-weight: 500; margin-bottom: 14px;">Methodology & Signal Reconciliation</h2>
+            <p style="font-size: 16px; line-height: 1.8; color: var(--ash); margin-bottom: 14px;">
+              Project Caligula’s systematic engine flagged EOG as a top-quartile fundamental operator in the Permian Basin. This DCF overlay reconciles that quality signal against the public market. Under our base WACC of **8.77%**, EOG's reserve-life depletion terminal value implies an intrinsic share price of **$149.60**, representing a **5.9% upside** over current market pricing.
+            </p>
+            <p style="font-size: 16px; line-height: 1.8; color: var(--ash); margin-bottom: 14px;">
+              Unlike traditional models that assume infinite terminal growth, we utilize a **reserve-life depletion model** (hyperbolic decline exponent $b = 0.9$, initial decline $Di = 25\%$) over a 25-year terminal phase to physically deplete EOG’s proved reserve base. Under this realistic constraint, we compare the spread to the traditional EBITDA multiple method (5.5x), which yields an intrinsic price of **$143.10**.
+            </p>
+            <p style="font-size: 16px; line-height: 1.8; color: var(--ash); margin-bottom: 14px;">
+              The current market price of **$141.22** implies that the market is pricing in a highly conservative long-run WTI price of **$68.50/bbl**, providing a compelling margin of safety.
+            </p>
+            
+            <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+              <a href="EOG_DCF_Writeup.pdf" class="btn btn-ink" target="_blank" style="height: 38px; padding: 0 20px; line-height: 38px;">Diligence Memo (PDF)</a>
+              <a href="EOG_DCF_Writeup.md" class="btn btn-outline" target="_blank" style="height: 38px; padding: 0 20px; line-height: 38px;">Markdown View</a>
+              <a href="EOG_DCF_Model.xlsx" class="btn btn-outline" download style="height: 38px; padding: 0 20px; line-height: 38px;">Download Excel Model</a>
+              <a href="https://github.com/prathamislit/investwithsnp" class="btn btn-outline" target="_blank" style="height: 38px; padding: 0 20px; line-height: 38px;">View GitHub Repository</a>
+            </div>
+          </div>
+
+          <!-- Heatmap Matrix -->
+          <div>
+            <h2 style="font-size: 22px; font-weight: 500; margin-bottom: 14px;">Price Sensitivity Surface</h2>
+            <div id="eog-heatmap-container" style="min-height: 280px; width: 100%; overflow-x: auto; background: var(--bg); border: 1px solid rgba(17,16,8,0.1); padding: 16px; display: flex; justify-content: center; align-items: center;">
+              <!-- Dynamic SVG Sensitivity Heatmap injected by main.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+
       <button id="dd-back-btn" class="btn btn-ink" style="margin-top: 20px; padding: 10px 24px; display: inline-block;">Return to Rankings</button>
     </section>
   </div>

@@ -330,6 +330,122 @@
         return svg;
     }
 
+    // ── Dynamic SVG Sensitivity Heatmap Builder ──────────────────────────────────
+    function drawSensitivityHeatmap() {
+        const rows = ['7.5%', '8.0%', '8.5%', '9.0%', '9.5%'];
+        const cols = ['$55', '$60', '$65', '$70', '$75', '$80'];
+        const heatmapData = {
+            '7.5%': [152.40, 158.20, 164.50, 171.20, 178.50, 186.20],
+            '8.0%': [145.20, 150.80, 156.80, 163.20, 170.10, 177.50],
+            '8.5%': [138.60, 143.90, 149.60, 155.80, 162.40, 169.40],
+            '9.0%': [132.50, 137.60, 143.10, 148.90, 155.20, 161.90],
+            '9.5%': [126.90, 131.80, 137.00, 142.60, 148.60, 155.00]
+        };
+
+        const cellW = 74;
+        const cellH = 34;
+        const labelW = 60; // WACC label column
+        const labelH = 35; // WTI label row
+        
+        const w = labelW + cols.length * cellW;
+        const h = labelH + rows.length * cellH + 30; // extra space for bottom legend
+        
+        let svg = `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%" style="background: var(--bg);">`;
+        
+        // 1. Column header box (WACC \ WTI)
+        svg += `
+            <rect x="0" y="0" width="${labelW}" height="${labelH}" fill="var(--p)" stroke="rgba(17,16,8,0.12)" stroke-width="0.5" />
+            <text x="${labelW/2}" y="${labelH/2 + 3}" font-family="var(--mono)" font-size="7" fill="var(--ink)" text-anchor="middle" font-weight="bold">WACC\\WTI</text>
+        `;
+        
+        // 2. Render column headers (WTI prices)
+        cols.forEach((col, j) => {
+            const x = labelW + j * cellW;
+            svg += `
+                <rect x="${x}" y="0" width="${cellW}" height="${labelH}" fill="var(--p)" stroke="rgba(17,16,8,0.12)" stroke-width="0.5" />
+                <text x="${x + cellW/2}" y="${labelH/2 + 3}" font-family="var(--mono)" font-size="8" fill="var(--ink)" text-anchor="middle" font-weight="bold">${col}</text>
+            `;
+        });
+        
+        // 3. Render rows
+        rows.forEach((row, i) => {
+            const y = labelH + i * cellH;
+            
+            // Row header (WACC)
+            svg += `
+                <rect x="0" y="${y}" width="${labelW}" height="${cellH}" fill="var(--p)" stroke="rgba(17,16,8,0.12)" stroke-width="0.5" />
+                <text x="${labelW/2}" y="${y + cellH/2 + 3}" font-family="var(--mono)" font-size="8" fill="var(--ink)" text-anchor="middle" font-weight="bold">${row}</text>
+            `;
+            
+            // Cells
+            cols.forEach((col, j) => {
+                const x = labelW + j * cellW;
+                const val = heatmapData[row][j];
+                const currentPrice = 141.22;
+                
+                // Color scaling
+                let fill = '#ffffff';
+                let textColor = 'var(--ink)';
+                
+                if (row === '8.5%' && col === '$65') {
+                    // Base case highlighted gold cell
+                    fill = '#FFE599';
+                } else if (val >= currentPrice) {
+                    // Upside: HSL green/teal
+                    const pct = (val - currentPrice) / currentPrice;
+                    const maxPct = 0.32; // max upside is ~32%
+                    const intensity = Math.min(1.0, pct / maxPct);
+                    const lightness = 96 - 22 * intensity;
+                    fill = `hsl(120, 24%, ${lightness}%)`;
+                    textColor = 'var(--sl)';
+                } else {
+                    // Downside: HSL muted red/coral
+                    const pct = (currentPrice - val) / currentPrice;
+                    const maxPct = 0.11; // max downside is ~11%
+                    const intensity = Math.min(1.0, pct / maxPct);
+                    const lightness = 96 - 16 * intensity;
+                    fill = `hsl(0, 36%, ${lightness}%)`;
+                    textColor = 'var(--sl)';
+                }
+                
+                const isBaseCase = (row === '8.5%' && col === '$65');
+                const strokeColor = isBaseCase ? 'var(--go)' : 'rgba(17,16,8,0.1)';
+                const strokeW = isBaseCase ? '2.5' : '0.5';
+                
+                svg += `
+                    <g>
+                        <rect x="${x}" y="${y}" width="${cellW}" height="${cellH}" fill="${fill}" stroke="${strokeColor}" stroke-width="${strokeW}" />
+                        <text x="${x + cellW/2}" y="${y + cellH/2 + 3}" font-family="${isBaseCase ? 'var(--mono)' : 'var(--serif)'}" font-size="${isBaseCase ? '9.5' : '9'}" font-weight="${isBaseCase ? 'bold' : 'normal'}" fill="${textColor}" text-anchor="middle">
+                            $${val.toFixed(2)}
+                        </text>
+                    </g>
+                `;
+            });
+        });
+        
+        // Add dynamic legend/caption in SVG
+        const legendY = h - 10;
+        svg += `
+            <rect x="${labelW + 5}" y="${legendY - 8}" width="8" height="8" fill="#FFE599" stroke="var(--go)" stroke-width="1.5" />
+            <text x="${labelW + 18}" y="${legendY - 1}" fill="var(--ash)" font-family="var(--serif)" font-size="8">
+                Baseline Case ($149.60)
+            </text>
+            
+            <rect x="${labelW + 150}" y="${legendY - 7}" width="10" height="6" fill="hsl(120, 24%, 85%)" stroke="rgba(17,16,8,0.1)" stroke-width="0.5" />
+            <text x="${labelW + 165}" y="${legendY - 1}" fill="var(--ash)" font-family="var(--serif)" font-size="8">
+                Market Upside (> $141.22)
+            </text>
+            
+            <rect x="${labelW + 295}" y="${legendY - 7}" width="10" height="6" fill="hsl(0, 36%, 85%)" stroke="rgba(17,16,8,0.1)" stroke-width="0.5" />
+            <text x="${labelW + 310}" y="${legendY - 1}" fill="var(--ash)" font-family="var(--serif)" font-size="8">
+                Market Downside (< $141.22)
+            </text>
+        `;
+        
+        svg += `</svg>`;
+        return svg;
+    }
+
     // ── Dynamic SVG Backtest Line Chart Builder (Option B & C) ────────────────────
     function drawBacktestLineChart(series) {
         if (!series || series.length === 0) return `<div class="td-sub">No backtest data loaded.</div>`;
@@ -516,6 +632,21 @@
 
             // Navigate to Caligula deep-dive subview
             setCaligulaSubview('deepdive');
+
+            // Toggle EOG DCF Plate II.5 overlay
+            const dcfPlate = document.getElementById('eog-dcf-plate');
+            if (dcfPlate) {
+                if (symbol === 'EOG') {
+                    dcfPlate.style.display = 'block';
+                    // Render dynamic SVG sensitivity heatmap inline
+                    const heatmapContainer = document.getElementById('eog-heatmap-container');
+                    if (heatmapContainer) {
+                        heatmapContainer.innerHTML = drawSensitivityHeatmap();
+                    }
+                } else {
+                    dcfPlate.style.display = 'none';
+                }
+            }
 
             const latest = data.latest;
 
