@@ -11,14 +11,6 @@
           "data/scores/**"
         ]
       }
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "main.js",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -27,12 +19,8 @@
       "dest": "api/index.py"
     },
     {
-      "src": "/main.js",
-      "dest": "/main.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "api/index.py"
     }
   ]
 }
