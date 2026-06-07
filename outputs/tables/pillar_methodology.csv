@@ -1,0 +1,2 @@
+pillar_id,pillar_name,metric_name,raw_formula,direction,normalization,winsorization,missing_data_rule,weight,source_type,source_table,rebalance_lag,notes
+P1,Hedge Book,NTM Hedge Floor Coverage,hedged_ntm_volume * weighted_floor,higher_is_better,min_max_0_1,none,neutral_0.5,0.125,SEC filing hedge footnote,Derivative instruments table,filing_cutoff_plus_next_rebalance,

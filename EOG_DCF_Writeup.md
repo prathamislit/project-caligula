@@ -1,6 +1,6 @@
 # SNP · INSTITUTIONAL INVESTMENT RESEARCH MEMO
 
-**TICKER:** EOG (NYSE) &nbsp;·&nbsp; **VALUATION DATE:** June 10, 2026 &nbsp;·&nbsp; **CURRENT PRICE:** $141.22 &nbsp;·&nbsp; **INTRINSIC VALUE:** $149.60 &nbsp;·&nbsp; **MISPRICING:** +5.9% (Undervalued)
+**TICKER:** EOG (NYSE) &nbsp;·&nbsp; **Draft valuation date:** June 10, 2026 &nbsp;·&nbsp; **CURRENT PRICE:** $141.22 &nbsp;·&nbsp; **INTRINSIC VALUE:** $149.60 &nbsp;·&nbsp; **MISPRICING:** +5.9% (Undervalued)
 
 ---
 
@@ -50,6 +50,6 @@ Our valuation model is built from three distinct quantitative schedules, ensurin
 
 ---
 
-## 4. dilutive Conclusion
+## 4. Conclusion
 
-The DCF valuation strongly **supports** Project Caligula’s systematic top-quartile screen. EOG’s fundamental quality—characterized by robust hedging protection, premium geology, and superior cost control—is not fully priced in by the market. We recommend going **Long EOG** to underwrite this operational discrepancy, targeting an intrinsic valuation of **$149.60 per share** (implied **5.9%** upside).
+The DCF valuation supports Project Caligula’s top-quartile screen. EOG’s fundamental quality—characterized by robust hedging protection, premium geology, and superior cost control—is largely priced in by the market, with a slight margin of safety. We recommend placing EOG on a **Watchlist / Mildly Undervalued** status, targeting an intrinsic valuation of **$149.60 per share** (implied **5.9%** upside).

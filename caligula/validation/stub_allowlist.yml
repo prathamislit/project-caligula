@@ -1,0 +1,12 @@
+# Permanent allowlist entries are forbidden.
+# All entries must have a reason, expiry_date, and owner.
+caligula/validation/no_stub_scan.py:
+  reason: Contains the forbidden strings as search patterns.
+  expiry_date: 2099-12-31
+  owner: Pratham Shah
+
+caligula/validation/inventory_scan.py:
+  reason: Checks path strings for TODOs to map files for deletion.
+  expiry_date: 2099-12-31
+  owner: Pratham Shah
+

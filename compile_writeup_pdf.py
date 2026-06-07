@@ -167,7 +167,7 @@ def build_pdf(filename="EOG_DCF_Writeup.pdf"):
     meta_data = [
         [
             Paragraph("<b>Ticker:</b> EOG (NYSE)", table_cell_style),
-            Paragraph("<b>Valuation Date:</b> June 10, 2026", table_cell_style),
+            Paragraph("<b>Draft valuation date:</b> June 10, 2026", table_cell_style),
             Paragraph("<b>Current Price:</b> $141.22", table_cell_style),
             Paragraph("<b>WACC:</b> 8.77%", table_cell_style)
         ],
@@ -405,10 +405,12 @@ def build_pdf(filename="EOG_DCF_Writeup.pdf"):
     # ── Section 4: Dilutive Conclusion ─────────────────────────────────────────
     story.append(Paragraph("4. Dilutive Conclusion", h2_style))
     c1_text = (
-        "The DCF valuation strongly <b>supports</b> Project Caligula’s systematic top-quartile screen. EOG’s fundamental quality—"
-        "characterized by robust hedging protection, premium geology, and superior cost control—is not fully priced in by the market. "
-        "We recommend going <b>Long EOG</b> to underwrite this operational discrepancy, targeting an intrinsic valuation of "
-        "<b>$149.60 per share</b> (implied <b>5.9%</b> upside)."
+        "The DCF valuation supports Project Caligula’s systematic top-quartile "
+        "screen. EOG’s fundamental quality—characterized by robust hedging "
+        "protection, premium geology, and superior cost control—is largely "
+        "priced in by the market, with a slight margin of safety. We recommend "
+        "a <b>Watchlist / Mildly Undervalued</b> status, targeting an intrinsic "
+        "valuation of <b>$149.60 per share</b> (implied <b>5.9%</b> upside)."
     )
     story.append(Paragraph(c1_text, body_style))
     
@@ -417,7 +419,11 @@ def build_pdf(filename="EOG_DCF_Writeup.pdf"):
     sig_data = [
         [
             Paragraph("<b>Pratham N. Shah</b><br/>Lead Quantitative Analyst, SNP", table_cell_style),
-            Paragraph("<b>Valuation Date:</b> June 10, 2026<br/><b>Location:</b> State College, PA", table_cell_style)
+            Paragraph(
+                "<b>Draft valuation date:</b> June 10, 2026<br/>"
+                "<b>Location:</b> State College, PA",
+                table_cell_style,
+            )
         ]
     ]
     sig_table = Table(sig_data, colWidths=[270, 270])

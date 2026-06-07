@@ -8,3 +8,13 @@ data/raw/
 data/processed/
 *.DS_Store
 .streamlit/secrets.toml
+
+# Proof-package generated artifacts
+proof_package/
+proof_logs.txt
+caligula_proof_package.zip
+
+# Proof-package generated artifacts
+proof_package/
+proof_logs.txt
+caligula_proof_package.zip

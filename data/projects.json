@@ -1,0 +1,106 @@
+{
+  "hero": "<div class=\"hero\">\n  <div class=\"hero-folio\">\n    <span>FOLIO · 00 — INTRODUCTION</span>\n    <span>EST. MMXXIV</span>\n  </div>\n\n  <div>\n    <div class=\"hero-kicker\">\n      <span class=\"marker\">PNS · 00</span>\n      Research Folio &nbsp;·&nbsp; Penn State University\n    </div>\n    <h1 class=\"hero-title\">Structuring<br>what the models<br><em>leave out.</em><sup>[0]</sup></h1>\n    <p class=\"hero-body\">\n      <span class=\"drop\">T</span>hree research initiatives targeting the qualitative friction\n      channels — geopolitical escalation, SEC footnote hedging schedules, and human capital\n      workforce diligence. By mapping messy, unstructured records to bounded risk indices,\n      these frameworks seek to build the numbers before the narrative.\n    </p>\n    <div class=\"hero-actions\">\n      <button class=\"btn btn-ink\" data-view=\"caligula\">Open Project Caligula</button>\n      <button class=\"btn btn-outline\" data-view=\"goldstein\">Goldstein</button>\n      <button class=\"btn btn-outline\" data-view=\"chc\">CHC Platform</button>\n    </div>\n  </div>\n\n  <aside class=\"hero-card\">\n    <div class=\"hero-card-hdr\"><span>Author · Colophon</span><span>OPEN</span></div>\n    <dl>\n      <div><dt>Perpetrator</dt><dd>Pratham N. Shah</dd></div>\n      <div><dt>Institution</dt><dd>Penn State</dd></div>\n      <div><dt>Concentration</dt><dd>Data Science</dd></div>\n      <div><dt>Status</dt><dd>Undergraduate <em>research</em></dd></div>\n      <div><dt>Projects</dt><dd>Three <em>active</em></dd></div>\n      <div><dt>Authored</dt><dd>2022–2026</dd></div>\n    </dl>\n    <div class=\"hero-card-foot\">\n      <span class=\"status\">Available for correspondence</span>\n      <span>PNS · MMXXVI</span>\n    </div>\n  </aside>\n\n  <div class=\"hero-stamp\">\n    <b>[0]</b> The number is the deliverable.<br>\n    Everything else is <em>context</em>.\n  </div>\n</div>",
+  "portfolio": {
+    "label": {
+      "num": "§ 01",
+      "text": "Research Portfolio &nbsp;·&nbsp; Three Active Projects"
+    },
+    "cards": [
+      {
+        "variant": "dark",
+        "roman": "PLATE · I",
+        "stamp": "VALIDATED",
+        "title": "Project <em>Goldstein</em>",
+        "tag": "Geopolitical Volatility Signal<br>12 Regions &nbsp;·&nbsp; 2022–2026",
+        "body": "A scoring engine that takes real-time conflict data from GDELT and ACLED and turns it into a daily variance score for each region. The core bet: geopolitical instability predicts how much a linked ETF moves, not which way.",
+        "spark": {
+          "stroke": "#B8922A",
+          "fillColor": "rgba(184,146,42,.14)",
+          "line": "M0,28 L20,25 L40,22 L60,26 L80,18 L100,20 L120,12 L140,15 L160,8 L180,11 L200,16 L220,9 L240,5 L260,12 L280,7"
+        },
+        "link": {
+          "view": "goldstein",
+          "label": "Read research"
+        },
+        "stats": [
+          {
+            "val": "64.4%",
+            "key": "Hit rate"
+          },
+          {
+            "val": "0.23",
+            "key": "Spearman IC"
+          },
+          {
+            "val": "323",
+            "key": "Events"
+          }
+        ]
+      },
+      {
+        "variant": "light",
+        "roman": "PLATE · II",
+        "stamp": "AUDITED PIPELINE",
+        "title": "Project <em>Caligula</em>",
+        "tag": "SEC Footnote Quality Engine<br>Audit Ledgers &nbsp;·&nbsp; PIT Backtest &nbsp;·&nbsp; EOG DCF",
+        "body": "A quantamental E&amp;P research engine that converts messy SEC footnotes into auditable quality signals. Phase II adds extraction ledgers, reserve mapping, point-in-time universe controls, performance ledgers, and static public exports.",
+        "spark": {
+          "stroke": "#111008",
+          "fillColor": "rgba(17,16,8,.07)",
+          "line": "M0,24 L20,28 L40,22 L60,16 L80,20 L100,14 L120,18 L140,10 L160,14 L180,8 L200,12 L220,6 L240,10 L260,4 L280,8"
+        },
+        "link": {
+          "view": "caligula",
+          "label": "Read research"
+        },
+        "stats": [
+          {
+            "val": "8",
+            "key": "Pillars"
+          },
+          {
+            "val": "31",
+            "key": "Names"
+          },
+          {
+            "val": "PIT",
+            "key": "Ledger"
+          }
+        ]
+      },
+      {
+        "variant": "dark",
+        "roman": "PLATE · III",
+        "stamp": "IN DEVELOPMENT",
+        "title": "CHC <em>Platform</em>",
+        "tag": "Private Equity · Human Capital<br>Mid-Market Diligence",
+        "body": "A diagnostic framework that scores workforce health for private equity targets before close. Five components, anchored to public records, normalised by sector. The output is a single composite score that goes into the data room alongside the financials.",
+        "spark": {
+          "stroke": "#B8922A",
+          "fillColor": "rgba(184,146,42,.14)",
+          "line": "M0,30 L20,26 L40,28 L60,22 L80,24 L100,18 L120,21 L140,15 L160,17 L180,13 L200,15 L220,11 L240,8 L260,10 L280,6"
+        },
+        "link": {
+          "view": "chc",
+          "label": "Read research"
+        },
+        "stats": [
+          {
+            "val": "5",
+            "key": "Components"
+          },
+          {
+            "val": "4",
+            "key": "Risk tiers"
+          },
+          {
+            "val": "72h",
+            "key": "Turnaround"
+          }
+        ]
+      }
+    ]
+  },
+  "method": "<section data-folio=\"P. 02 / METHOD\">\n  <div class=\"sec-label\" data-num=\"§ 02\">Methodology &nbsp;·&nbsp; What our projects share</div>\n  <div class=\"approach-grid\">\n    <div class=\"approach-col\">\n      <h2><span class=\"num\">i. Discipline</span>Build the number<br>before the <em>narrative.</em></h2>\n      <p>\n        Most risk conversations in finance end with a qualitative opinion: a country\n        rating, a management bio, an analyst note. Those outputs cannot be backtested,\n        compared across deals, or revisited after the fact.\n      </p>\n      <p>\n        Our projects start from the same constraint: <strong>take messy, partial inputs\n        and produce one bounded, sector-normalised score.</strong> The score is the\n        deliverable. Everything around it is context.\n      </p>\n      <div class=\"footnote\">Bounded score · Sector-normalised · Audit trail preserved</div>\n    </div>\n    <div class=\"approach-col\">\n      <h2><span class=\"num\">ii. Honesty</span>Publish the<br><em>false positives.</em></h2>\n      <p>\n        Goldstein publishes a 29.2% false positive rate and a 252-day warm-up exclusion\n        per region. CHC explicitly disclaims predictive ability and frames its output\n        as a descriptive diagnostic.\n      </p>\n      <p>\n        None of our projects claim more than the data actually supports. A coefficient\n        needs to clear statistical significance. A score needs a documented methodology\n        and a pipeline someone else could reproduce.\n      </p>\n      <div class=\"footnote\">Out-of-sample validation · Documented limitations · Reproducible</div>\n    </div>\n  </div>\n</section>",
+  "pullquote": "<div class=\"pull\">\n  <blockquote>\n    The score is the deliverable.<br>Everything around it is <em>context.</em>\n  </blockquote>\n  <cite>— Method note · § 02</cite>\n</div>"
+}

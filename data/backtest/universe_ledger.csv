@@ -1,0 +1,2 @@
+rebalance_date,ticker,eligible_flag,inclusion_reason,exclusion_reason,listing_status,market_cap,adv_30d,filing_available_flag,latest_filing_used,latest_filing_date,latest_filing_accepted_datetime,sector,basin,delisting_return_applied
+2026-05-15,EOG,True,Passes liquidity and sector screen,,Active,81000000000,500000000,True,10-Q,2026-05-02,2026-05-02T16:05:00Z,Energy,Permian,0.0

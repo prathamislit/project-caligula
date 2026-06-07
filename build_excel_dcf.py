@@ -55,7 +55,7 @@ def build_model():
     ws_cover['A1'].font = title_font
     ws_cover['A2'] = "EOG Resources, Inc. (NYSE: EOG) — 3-Statement DCF dilutive Model"
     ws_cover['A2'].font = italic_font
-    ws_cover['A4'] = "Target Valuation Date:"
+    ws_cover['A4'] = "Target draft valuation date:"
     ws_cover['B4'] = "2026-06-10"
     ws_cover['A5'] = "Current Market Price:"
     ws_cover['B5'] = 141.22
@@ -82,8 +82,8 @@ def build_model():
         cell.font = header_font
         cell.fill = header_fill
 
-    # Valuation Date
-    ws_ass['A4'] = "Valuation Date"
+    # Draft valuation date
+    ws_ass['A4'] = "Draft valuation date"
     ws_ass['B4'] = "2026-06-10"
     ws_ass['C4'] = "Date"
     ws_ass['D4'] = "Model Parameter"

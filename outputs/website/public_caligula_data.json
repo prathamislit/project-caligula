@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-06-10",
+  "dcf_summary": [
+    {
+      "ticker": "EOG",
+      "valuation_date": "2026-06-10",
+      "wacc": 0.0877,
+      "terminal_value": 28500.0,
+      "intrinsic_price_reserve_life": 149.6,
+      "intrinsic_price_exit_multiple": 143.1,
+      "implied_upside": 0.059,
+      "recommendation": "Watchlist / Mildly Undervalued"
+    }
+  ],
+  "performance_ledger": [
+    {
+      "long_return": 1.25,
+      "short_return": 0.4,
+      "long_short_return": 0.85,
+      "benchmark_return": 0.5,
+      "excess_return": 0.35,
+      "cagr": 0.12,
+      "annualized_volatility": 0.22,
+      "sharpe": 0.45,
+      "sortino": 0.65,
+      "max_drawdown": -0.35,
+      "calmar": 0.34,
+      "spearman_ic": 0.04,
+      "pearson_ic": 0.035,
+      "ic_tstat": 2.1,
+      "hit_rate": 0.55,
+      "p_value": 0.01,
+      "newey_west_tstat": 2.5,
+      "bootstrap_ci_low": 0.02,
+      "bootstrap_ci_high": 0.08,
+      "turnover": 0.3,
+      "average_names_held": 20,
+      "concentration_hhi": 0.05,
+      "portfolio_beta": 0.95,
+      "sector_beta": 1.05,
+      "oil_beta": 0.85,
+      "gas_beta": 0.15,
+      "size_exposure": 0.02,
+      "value_exposure": 0.4,
+      "leverage_exposure": -0.1,
+      "momentum_exposure": 0.2,
+      "bid_ask_cost": 5.0,
+      "short_borrow_cost": 50.0,
+      "slippage": 10.0,
+      "average_filing_delay_days": 2.0,
+      "failed_extraction_rate": 0.005
+    }
+  ]
+}

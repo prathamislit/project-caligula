@@ -1,0 +1,4 @@
+ticker,valuation_date,reserve_bucket,commodity,starting_reserves_boe,risk_factor,initial_decline_rate,terminal_decline_rate,decline_exponent,development_capex_per_boe,loe_per_boe,transport_per_boe,production_tax_rate,realization_pct,price_deck,production_year,pv_fcff
+EOG,2026-06-10,PDP,boe,200.0,1.0,0.25,0.05,0.9,0.0,6.5,1.2,0.07,0.95,68.5,1,15000.0
+EOG,2026-06-10,PDNP,boe,100.0,0.9,0.3,0.05,0.9,5.0,6.5,1.2,0.07,0.95,68.5,1,6000.0
+EOG,2026-06-10,PUD,boe,150.0,0.75,0.35,0.05,0.9,12.0,6.5,1.2,0.07,0.95,68.5,1,7500.0

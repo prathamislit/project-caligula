@@ -96,7 +96,7 @@ This is documented transparently because hiding it would compromise the framewor
 ---
 
 ## 📊 Elite Diligence Overlay: EOG Resources 3-Statement DCF Model
-To validate systematic "top-quartile fundamental quality" signals flagged by the Caligula engine, we construct an institutional-grade, audit-traceable, **three-statement linked DCF model for EOG Resources, Inc. (NYSE: EOG)**.
+To validate systematic "top-quartile fundamental quality" signals flagged by the Caligula engine, we construct an audit-traceable, **three-statement linked DCF model for EOG Resources, Inc. (NYSE: EOG)**.
 
 ### Model Features
 1. **Linked Three-Statement Projection Scaffolding:** FY23A–FY25A historicals link to FY26E–FY30E dynamic projections, balancing Assets = Liabilities + Equity to the dollar.
@@ -122,4 +122,3 @@ To execute the verification test suite:
 python3 -m pytest eog_dcf/tests/test_excel_python_parity.py
 ```
 *Verification status: 100% Pass (0.0% delta on WACC, Reserve Life price, and Exit Multiple price).*
-

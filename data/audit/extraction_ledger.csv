@@ -1,0 +1,2 @@
+ticker,fiscal_year,filing_type,filing_accession,filing_date,accepted_datetime,source_url,source_table,source_page,source_text_hash,raw_extracted_text,field_name,extracted_value,unit,prompt_version,model_name,confidence_score,human_override_flag,override_reason,audit_hash,created_at
+EOG,2026,10-Q,0000821189-26-000010,2026-05-02,2026-05-02T16:05:00Z,https://sec.gov/...,Derivatives,14,abc123hash,we hedged 52% of NTM,pct_oil_hedged_ntm,0.52,pct,v1,gemini-1.5-flash,0.95,False,,validhash123,2026-06-06T23:09:46.344085+00:00

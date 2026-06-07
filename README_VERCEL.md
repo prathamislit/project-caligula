@@ -1,6 +1,6 @@
 # 🚀 Project Caligula: Vercel Serverless Deployment Guide
 
-Welcome! This guide explains exactly how to deploy your handcrafted, institutional-grade quantamental platform onto Vercel's edge network under your own custom domain, completely bypassing the Streamlit framework.
+Welcome! This guide explains exactly how to deploy your handcrafted quantamental platform onto Vercel's edge network under your own custom domain, completely bypassing the Streamlit framework.
 
 Vercel will compile your static HTML/JS frontend instantly and mount your core Python scoring model inside **Vercel Serverless Functions** (running in the cloud) under `/api/*`.
 
