@@ -10,6 +10,21 @@ def load_methodology() -> dict:
         return yaml.safe_load(f)
 
 
+def _minmax_by_quarter(raw: pd.Series, quarter: pd.Series) -> pd.Series:
+    """Min-max normalize 0-1 within each quarter (point-in-time cross-section).
+
+    Normalizing per quarter prevents look-ahead: values from future quarters
+    must never rescale a past quarter's scores. Degenerate cross-sections
+    (max == min) get a neutral 0.5.
+    """
+    grouped = raw.groupby(quarter)
+    mn = grouped.transform("min")
+    mx = grouped.transform("max")
+    out = (raw - mn) / (mx - mn)
+    out[mx == mn] = 0.5
+    return out
+
+
 def calculate_hedge_book_score(df: pd.DataFrame) -> pd.Series:
     """Example pillar calculation: Hedge Book."""
     if "pct_oil_hedged_ntm" not in df.columns or "weighted_floor" not in df.columns:
@@ -17,11 +32,7 @@ def calculate_hedge_book_score(df: pd.DataFrame) -> pd.Series:
 
     # Simple metric: coverage * floor
     raw = df["pct_oil_hedged_ntm"] * df["weighted_floor"]
-
-    # Normalize 0 to 1
-    if raw.max() == raw.min():
-        return pd.Series(0.5, index=df.index)
-    return (raw - raw.min()) / (raw.max() - raw.min())
+    return _minmax_by_quarter(raw, df["quarter"])
 
 
 def calculate_reserve_score(df: pd.DataFrame) -> pd.Series:
@@ -29,10 +40,7 @@ def calculate_reserve_score(df: pd.DataFrame) -> pd.Series:
     if "tier1_years" not in df.columns:
         return pd.Series(0.5, index=df.index)
 
-    raw = df["tier1_years"]
-    if raw.max() == raw.min():
-        return pd.Series(0.5, index=df.index)
-    return (raw - raw.min()) / (raw.max() - raw.min())
+    return _minmax_by_quarter(df["tier1_years"], df["quarter"])
 
 
 def calculate_unit_economics_score(df: pd.DataFrame) -> pd.Series:
@@ -42,9 +50,7 @@ def calculate_unit_economics_score(df: pd.DataFrame) -> pd.Series:
 
     # Lower cost is better
     raw = -(df["fd_cost_per_boe"] + df["cash_opex_per_boe"])
-    if raw.max() == raw.min():
-        return pd.Series(0.5, index=df.index)
-    return (raw - raw.min()) / (raw.max() - raw.min())
+    return _minmax_by_quarter(raw, df["quarter"])
 
 
 def compute_all_pillars(df: pd.DataFrame) -> pd.DataFrame:

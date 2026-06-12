@@ -4,6 +4,7 @@ import requests
 import time
 from tenacity import retry, stop_after_attempt, wait_exponential
 from ..config import env
+from caligula.errors import CaligulaDataError
 from caligula.paths import write_cache, read_cache
 
 BASE = "https://data.sec.gov"
@@ -70,4 +71,10 @@ def get_cik_for_ticker(ticker: str) -> str:
             mapping[item["ticker"]] = str(item["cik_str"])
         write_cache(mapping, "edgar", "ticker_cik_map", "json")
         cached_mapping = mapping
-    return cached_mapping.get(ticker, "")
+    cik = cached_mapping.get(ticker, "")
+    if not cik:
+        raise CaligulaDataError(
+            f"Ticker {ticker!r} not found in SEC ticker-CIK map "
+            "(delisted or invalid symbol?)."
+        )
+    return cik
