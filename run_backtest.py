@@ -1,13 +1,20 @@
-"""v2: End-to-end backtest runner."""
+"""v2: End-to-end backtest runner.
+
+Usage:
+    python run_backtest.py             # reuse cached score panels if present
+    python run_backtest.py --refresh   # force full re-scoring (EDGAR + LLM)
+"""
+import argparse
 import warnings
 warnings.filterwarnings("ignore")
 
 import pandas as pd
-from pathlib import Path
 from src.utils.config import load_universe, DATA_DIR
 from src.ingest.price_client import get_prices
-from src.backtest.score_history import run_backtest_scoring
+from src.backtest.score_history import run_backtest_scoring, run_general_backtest_scoring
 from src.backtest.portfolio_engine import build_portfolio, compute_returns, performance_stats
+
+SCORES_DIR = DATA_DIR / "scores"
 
 
 def ensure_prices_cached():
@@ -24,15 +31,39 @@ def ensure_prices_cached():
         print(f"  {t}... {status}")
 
 
+def load_or_compute_scores(refresh: bool):
+    """Load the cached score panel unless a refresh is requested."""
+    path = SCORES_DIR / "all_scores.parquet"
+    if not refresh and path.exists():
+        scores = pd.read_parquet(path)
+        print(f"Loaded cached Permian score panel: {len(scores)} rows "
+              f"({scores['quarter'].nunique()} quarters). Use --refresh to recompute.")
+        return scores
+    print("\nRunning quarterly Permian E&P backtest scoring...")
+    return run_backtest_scoring()
+
+
+def load_or_compute_general_scores(refresh: bool):
+    path = SCORES_DIR / "general_scores.parquet"
+    if not refresh and path.exists():
+        scores = pd.read_parquet(path)
+        print(f"Loaded cached General Corporate score panel: {len(scores)} rows. "
+              "(NOTE: simulated comparison universe, not real fundamentals.)")
+        return scores
+    print("\nRunning quarterly General Corporate backtest scoring (simulated comparison)...")
+    return run_general_backtest_scoring()
+
+
 def main():
+    parser = argparse.ArgumentParser(description="Caligula end-to-end backtest")
+    parser.add_argument("--refresh", action="store_true",
+                        help="Force full re-scoring instead of reusing cached panels")
+    args = parser.parse_args()
+
     ensure_prices_cached()
 
-    print("\nRunning quarterly Permian E&P backtest scoring...")
-    scores = run_backtest_scoring()
-
-    print("\nRunning quarterly General Corporate backtest scoring...")
-    from src.backtest.score_history import run_general_backtest_scoring
-    general_scores = run_general_backtest_scoring()
+    scores = load_or_compute_scores(args.refresh)
+    general_scores = load_or_compute_general_scores(args.refresh)
 
     if scores is None or scores.empty:
         print("Backtest failed — no Permian scores generated.")
@@ -54,14 +85,13 @@ def main():
     print("\n===========================================================")
     print("                QUANTAMENTAL BACKTEST COMPARISON           ")
     print("===========================================================")
-    print(f"  Metric                  Permian E&P        General Corporate")
+    print(f"  Metric                  Permian E&P        General Corporate*")
     print(f"  ---------------------------------------------------------")
     metrics_to_print = ["ann_return", "ann_vol", "sharpe", "max_drawdown", "hit_rate", "n_quarters"]
     for m in metrics_to_print:
         val_ep = stats.get(m)
         val_gc = general_stats.get(m)
-        
-        # Format string
+
         if m in ["ann_return", "ann_vol", "max_drawdown", "hit_rate"]:
             str_ep = f"{val_ep:.1%}" if val_ep is not None else "N/A"
             str_gc = f"{val_gc:.1%}" if val_gc is not None else "N/A"
@@ -71,16 +101,21 @@ def main():
         else:
             str_ep = str(val_ep)
             str_gc = str(val_gc)
-            
+
         label = m.replace("_", " ").title()
         print(f"  {label:<24} {str_ep:<18} {str_gc}")
+    print("  * General Corporate scores are a simulated comparison universe.")
     print("===========================================================")
 
     # Save parquets
-    returns.to_parquet(DATA_DIR / "scores" / "backtest_returns.parquet")
-    general_returns.to_parquet(DATA_DIR / "scores" / "general_backtest_returns.parquet")
+    returns.to_parquet(SCORES_DIR / "backtest_returns.parquet")
+    general_returns.to_parquet(SCORES_DIR / "general_backtest_returns.parquet")
     print(f"\nWrote returns to parquet archives.")
-    print(f"Done. Ready for dynamic front-end rendering!")
+
+    # Regenerate the canonical performance ledger from the real return series
+    from caligula.backtest.performance_ledger import run_performance_ledger
+    run_performance_ledger()
+    print("Regenerated data/backtest/performance_ledger.csv from real returns.")
 
 
 if __name__ == "__main__":

@@ -4,69 +4,153 @@
     {
       "rank": 1,
       "ticker": "EOG",
-      "tier": "A",
-      "composite": 0.663357,
-      "unit_econ": 1.0,
-      "capital_discipline": 0.5,
-      "balance_sheet": 0.5,
-      "hedge_book": 0.806857,
-      "reserves": 1.0,
-      "operational": 0.5,
-      "sentiment": 0.5,
-      "macro": 0.5
+      "tier": "B",
+      "composite": 0.64031,
+      "unit_econ": 0.402778,
+      "capital_discipline": 0.861905,
+      "balance_sheet": 0.892857,
+      "hedge_book": 0.533333,
+      "reserves": 0.47381,
+      "operational": 0.65,
+      "sentiment": 0.711111,
+      "macro": 0.628395
     },
     {
       "rank": 2,
-      "ticker": "FANG",
+      "ticker": "CTRA",
       "tier": "B",
-      "composite": 0.526339,
-      "unit_econ": 0.625,
-      "capital_discipline": 0.5,
-      "balance_sheet": 0.5,
-      "hedge_book": 0.514286,
-      "reserves": 0.571429,
-      "operational": 0.5,
-      "sentiment": 0.5,
-      "macro": 0.5
+      "composite": 0.591911,
+      "unit_econ": 0.513889,
+      "capital_discipline": 0.8,
+      "balance_sheet": 0.59,
+      "hedge_book": 0.7,
+      "reserves": 0.435,
+      "operational": 0.555,
+      "sentiment": 0.541111,
+      "macro": 0.566667
     },
     {
       "rank": 3,
-      "ticker": "CTRA",
-      "tier": "C",
-      "composite": 0.46875,
-      "unit_econ": 0.25,
-      "capital_discipline": 0.5,
-      "balance_sheet": 0.5,
-      "hedge_book": 1.0,
-      "reserves": 0.0,
-      "operational": 0.5,
-      "sentiment": 0.5,
-      "macro": 0.5
+      "ticker": "FANG",
+      "tier": "B",
+      "composite": 0.565016,
+      "unit_econ": 0.797222,
+      "capital_discipline": 0.423492,
+      "balance_sheet": 0.571429,
+      "hedge_book": 0.433333,
+      "reserves": 0.530952,
+      "operational": 0.655,
+      "sentiment": 0.48,
+      "macro": 0.541975
     },
     {
       "rank": 4,
-      "ticker": "PXD",
+      "ticker": "OVV",
+      "tier": "C",
+      "composite": 0.532619,
+      "unit_econ": 0.580556,
+      "capital_discipline": 0.508889,
+      "balance_sheet": 0.35,
+      "hedge_book": 0.766667,
+      "reserves": 0.402381,
+      "operational": 0.575,
+      "sentiment": 0.595556,
+      "macro": 0.504938
+    },
+    {
+      "rank": 5,
+      "ticker": "APA",
+      "tier": "C",
+      "composite": 0.531675,
+      "unit_econ": 0.469444,
+      "capital_discipline": 0.576508,
+      "balance_sheet": 0.65,
+      "hedge_book": 0.533333,
+      "reserves": 0.730357,
+      "operational": 0.405,
+      "sentiment": 0.465556,
+      "macro": 0.344444
+    },
+    {
+      "rank": 6,
+      "ticker": "MTDR",
+      "tier": "C",
+      "composite": 0.500698,
+      "unit_econ": 0.455556,
+      "capital_discipline": 0.355873,
+      "balance_sheet": 0.507143,
+      "hedge_book": 0.366667,
+      "reserves": 0.570238,
+      "operational": 0.75,
+      "sentiment": 0.67,
+      "macro": 0.44321
+    },
+    {
+      "rank": 7,
+      "ticker": "PR",
+      "tier": "C",
+      "composite": 0.480055,
+      "unit_econ": 0.469444,
+      "capital_discipline": 0.34026,
+      "balance_sheet": 0.414286,
+      "hedge_book": 0.533333,
+      "reserves": 0.558929,
+      "operational": 0.525,
+      "sentiment": 0.508333,
+      "macro": 0.579012
+    },
+    {
+      "rank": 8,
+      "ticker": "SM",
+      "tier": "C",
+      "composite": 0.467123,
+      "unit_econ": 0.202778,
+      "capital_discipline": 0.622449,
+      "balance_sheet": 0.43,
+      "hedge_book": 0.333333,
+      "reserves": 0.758333,
+      "operational": 0.745,
+      "sentiment": 0.383333,
+      "macro": 0.369136
+    },
+    {
+      "rank": 9,
+      "ticker": "CIVI",
+      "tier": "C",
+      "composite": 0.460014,
+      "unit_econ": 0.272222,
+      "capital_discipline": 0.671429,
+      "balance_sheet": 0.285714,
+      "hedge_book": 0.866667,
+      "reserves": 0.34,
+      "operational": 0.51,
+      "sentiment": 0.25,
+      "macro": 0.55
+    },
+    {
+      "rank": 10,
+      "ticker": "CRGY",
       "tier": "D",
-      "composite": 0.348214,
-      "unit_econ": 0.0,
-      "capital_discipline": 0.5,
-      "balance_sheet": 0.5,
-      "hedge_book": 0.0,
-      "reserves": 0.285714,
-      "operational": 0.5,
-      "sentiment": 0.5,
-      "macro": 0.5
+      "composite": 0.361614,
+      "unit_econ": 0.502778,
+      "capital_discipline": 0.171429,
+      "balance_sheet": 0.314286,
+      "hedge_book": 0.433333,
+      "reserves": 0.695,
+      "operational": 0.13,
+      "sentiment": 0.32,
+      "macro": 0.233333
     }
   ],
   "backtests": {
     "ep_study": {
       "label": "Permian Basin E&P Study",
       "stats": {
-        "cagr": 0.12,
-        "volatility": 0.22,
-        "sharpe": 0.45,
-        "max_drawdown": -0.35,
-        "hit_rate": 0.55
+        "cagr": null,
+        "volatility": 0.628893,
+        "sharpe": -0.168646,
+        "max_drawdown": -1.209773,
+        "hit_rate": 0.416667
       },
       "wealth_path": [],
       "quarterly_returns": []
@@ -79,793 +163,237 @@
     }
   },
   "deep_dive": {
-    "FANG": {
-      "ticker": "FANG",
-      "company": "Diamondback Energy",
-      "sector": "Energy",
-      "industry": "Oil & Gas Exploration & Production",
-      "tier": "B",
-      "composite": 0.526339,
-      "pillars": {
-        "unit_econ": 0.625,
-        "capital_discipline": 0.5,
-        "balance_sheet": 0.5,
-        "hedge_book": 0.514286,
-        "reserves": 0.571429,
-        "operational": 0.5,
-        "sentiment": 0.5,
-        "macro": 0.5
-      },
-      "metrics": [
-        {
-          "metric": "Composite Score",
-          "value": "0.526339",
-          "score": 0.526339
-        },
-        {
-          "metric": "Unit Economics",
-          "value": "0.625",
-          "score": 0.625
-        },
-        {
-          "metric": "Capital Discipline",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Balance Sheet",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Hedge Book",
-          "value": "0.514286",
-          "score": 0.514286
-        },
-        {
-          "metric": "Reserves",
-          "value": "0.571429",
-          "score": 0.571429
-        },
-        {
-          "metric": "Operational",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Sentiment",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Macro Sensitivity",
-          "value": "0.5",
-          "score": 0.5
-        }
-      ],
-      "history": [
-        {
-          "quarter": "2014-03-31",
-          "score": 0.431116
-        },
-        {
-          "quarter": "2014-06-30",
-          "score": 0.46317
-        },
-        {
-          "quarter": "2014-09-30",
-          "score": 0.44877
-        },
-        {
-          "quarter": "2014-12-31",
-          "score": 0.46444
-        },
-        {
-          "quarter": "2015-03-31",
-          "score": 0.462922
-        },
-        {
-          "quarter": "2015-06-30",
-          "score": 0.539058
-        },
-        {
-          "quarter": "2015-09-30",
-          "score": 0.52138
-        },
-        {
-          "quarter": "2015-12-31",
-          "score": 0.489951
-        },
-        {
-          "quarter": "2016-03-31",
-          "score": 0.529032
-        },
-        {
-          "quarter": "2016-06-30",
-          "score": 0.483675
-        },
-        {
-          "quarter": "2016-09-30",
-          "score": 0.434925
-        },
-        {
-          "quarter": "2016-12-31",
-          "score": 0.561248
-        },
-        {
-          "quarter": "2017-03-31",
-          "score": 0.477195
-        },
-        {
-          "quarter": "2017-06-30",
-          "score": 0.455232
-        },
-        {
-          "quarter": "2017-09-30",
-          "score": 0.511304
-        },
-        {
-          "quarter": "2017-12-31",
-          "score": 0.404964
-        },
-        {
-          "quarter": "2018-03-31",
-          "score": 0.55497
-        },
-        {
-          "quarter": "2018-06-30",
-          "score": 0.50247
-        },
-        {
-          "quarter": "2018-09-30",
-          "score": 0.424345
-        },
-        {
-          "quarter": "2018-12-31",
-          "score": 0.55881
-        },
-        {
-          "quarter": "2019-03-31",
-          "score": 0.392887
-        },
-        {
-          "quarter": "2019-06-30",
-          "score": 0.498601
-        },
-        {
-          "quarter": "2019-09-30",
-          "score": 0.459613
-        },
-        {
-          "quarter": "2019-12-31",
-          "score": 0.549613
-        },
-        {
-          "quarter": "2020-03-31",
-          "score": 0.514667
-        },
-        {
-          "quarter": "2020-06-30",
-          "score": 0.484917
-        },
-        {
-          "quarter": "2020-09-30",
-          "score": 0.562028
-        },
-        {
-          "quarter": "2020-12-31",
-          "score": 0.501722
-        },
-        {
-          "quarter": "2021-03-31",
-          "score": 0.487944
-        },
-        {
-          "quarter": "2021-06-30",
-          "score": 0.541389
-        },
-        {
-          "quarter": "2021-09-30",
-          "score": 0.476167
-        },
-        {
-          "quarter": "2021-12-31",
-          "score": 0.412242
-        },
-        {
-          "quarter": "2022-03-31",
-          "score": 0.440062
-        },
-        {
-          "quarter": "2022-06-30",
-          "score": 0.525478
-        },
-        {
-          "quarter": "2022-09-30",
-          "score": 0.57788
-        },
-        {
-          "quarter": "2022-12-31",
-          "score": 0.503267
-        },
-        {
-          "quarter": "2023-03-31",
-          "score": 0.557689
-        },
-        {
-          "quarter": "2023-06-30",
-          "score": 0.532117
-        },
-        {
-          "quarter": "2023-09-30",
-          "score": 0.572252
-        },
-        {
-          "quarter": "2023-12-31",
-          "score": 0.549987
-        },
-        {
-          "quarter": "2024-03-31",
-          "score": 0.561788
-        },
-        {
-          "quarter": "2024-06-30",
-          "score": 0.501284
-        },
-        {
-          "quarter": "2024-09-30",
-          "score": 0.528001
-        },
-        {
-          "quarter": "2024-12-31",
-          "score": 0.452821
-        },
-        {
-          "quarter": "2025-03-31",
-          "score": 0.491429
-        },
-        {
-          "quarter": "2025-06-30",
-          "score": 0.509192
-        },
-        {
-          "quarter": "2025-09-30",
-          "score": 0.530065
-        },
-        {
-          "quarter": "2025-12-31",
-          "score": 0.565016
-        },
-        {
-          "quarter": "2026-03-31",
-          "score": 0.526339
-        }
-      ],
-      "narrative": "Diamondback Energy screens as a mid-quality operator under the Caligula framework with a composite score of 0.53 (Tier B)."
-    },
-    "MTDR": {
-      "ticker": "MTDR",
-      "company": "Matador Resources",
+    "CPE": {
+      "ticker": "CPE",
+      "company": "Callon Petroleum",
       "sector": "Energy",
       "industry": "Oil & Gas Exploration & Production",
       "tier": "C",
-      "composite": 0.500698,
+      "composite": 0.520065,
       "pillars": {
-        "unit_econ": 0.455556,
-        "capital_discipline": 0.355873,
-        "balance_sheet": 0.507143,
-        "hedge_book": 0.366667,
-        "reserves": 0.570238,
-        "operational": 0.75,
-        "sentiment": 0.67,
-        "macro": 0.44321
+        "unit_econ": 0.568376,
+        "capital_discipline": 0.448551,
+        "balance_sheet": 0.697344,
+        "hedge_book": 0.730769,
+        "reserves": 0.546154,
+        "operational": 0.357692,
+        "sentiment": 0.153846,
+        "macro": 0.538462
       },
       "metrics": [
         {
           "metric": "Composite Score",
-          "value": "0.500698",
-          "score": 0.500698
+          "value": "0.520065",
+          "score": 0.520065
         },
         {
           "metric": "Unit Economics",
-          "value": "0.455556",
-          "score": 0.455556
+          "value": "0.568376",
+          "score": 0.568376
         },
         {
           "metric": "Capital Discipline",
-          "value": "0.355873",
-          "score": 0.355873
+          "value": "0.448551",
+          "score": 0.448551
         },
         {
           "metric": "Balance Sheet",
-          "value": "0.507143",
-          "score": 0.507143
+          "value": "0.697344",
+          "score": 0.697344
         },
         {
           "metric": "Hedge Book",
-          "value": "0.366667",
-          "score": 0.366667
+          "value": "0.730769",
+          "score": 0.730769
         },
         {
           "metric": "Reserves",
-          "value": "0.570238",
-          "score": 0.570238
+          "value": "0.546154",
+          "score": 0.546154
         },
         {
           "metric": "Operational",
-          "value": "0.75",
-          "score": 0.75
+          "value": "0.357692",
+          "score": 0.357692
         },
         {
           "metric": "Sentiment",
-          "value": "0.67",
-          "score": 0.67
+          "value": "0.153846",
+          "score": 0.153846
         },
         {
           "metric": "Macro Sensitivity",
-          "value": "0.44321",
-          "score": 0.44321
+          "value": "0.538462",
+          "score": 0.538462
         }
       ],
       "history": [
         {
           "quarter": "2014-03-31",
-          "score": 0.478848
+          "score": 0.586357
         },
         {
           "quarter": "2014-06-30",
-          "score": 0.572759
+          "score": 0.624679
         },
         {
           "quarter": "2014-09-30",
-          "score": 0.642384
+          "score": 0.672054
         },
         {
           "quarter": "2014-12-31",
-          "score": 0.61178
+          "score": 0.578554
         },
         {
           "quarter": "2015-03-31",
-          "score": 0.589321
+          "score": 0.588268
         },
         {
           "quarter": "2015-06-30",
-          "score": 0.610464
+          "score": 0.630179
         },
         {
           "quarter": "2015-09-30",
-          "score": 0.487964
+          "score": 0.595804
         },
         {
           "quarter": "2015-12-31",
-          "score": 0.518839
+          "score": 0.687536
         },
         {
           "quarter": "2016-03-31",
-          "score": 0.564339
+          "score": 0.542804
         },
         {
           "quarter": "2016-06-30",
-          "score": 0.390714
+          "score": 0.640839
         },
         {
           "quarter": "2016-09-30",
-          "score": 0.483714
+          "score": 0.635125
         },
         {
           "quarter": "2016-12-31",
-          "score": 0.501714
+          "score": 0.515054
         },
         {
           "quarter": "2017-03-31",
-          "score": 0.558839
+          "score": 0.570768
         },
         {
           "quarter": "2017-06-30",
-          "score": 0.551839
+          "score": 0.631071
         },
         {
           "quarter": "2017-09-30",
-          "score": 0.623339
+          "score": 0.492911
         },
         {
           "quarter": "2017-12-31",
-          "score": 0.589714
+          "score": 0.532911
         },
         {
           "quarter": "2018-03-31",
-          "score": 0.448214
+          "score": 0.436964
         },
         {
           "quarter": "2018-06-30",
-          "score": 0.483018
+          "score": 0.511714
         },
         {
           "quarter": "2018-09-30",
-          "score": 0.562393
+          "score": 0.522964
         },
         {
           "quarter": "2018-12-31",
-          "score": 0.553518
+          "score": 0.481214
         },
         {
           "quarter": "2019-03-31",
-          "score": 0.573988
+          "score": 0.636212
         },
         {
           "quarter": "2019-06-30",
-          "score": 0.498363
+          "score": 0.521283
         },
         {
           "quarter": "2019-09-30",
-          "score": 0.501101
+          "score": 0.487265
         },
         {
           "quarter": "2019-12-31",
-          "score": 0.474851
+          "score": 0.452605
         },
         {
           "quarter": "2020-03-31",
-          "score": 0.541833
+          "score": 0.480083
         },
         {
           "quarter": "2020-06-30",
-          "score": 0.584722
+          "score": 0.451258
         },
         {
           "quarter": "2020-09-30",
-          "score": 0.534694
+          "score": 0.527036
         },
         {
           "quarter": "2020-12-31",
-          "score": 0.491806
+          "score": 0.425702
         },
         {
           "quarter": "2021-03-31",
-          "score": 0.407583
+          "score": 0.434369
         },
         {
           "quarter": "2021-06-30",
-          "score": 0.491694
+          "score": 0.490639
         },
         {
           "quarter": "2021-09-30",
-          "score": 0.505639
+          "score": 0.525909
         },
         {
           "quarter": "2021-12-31",
-          "score": 0.499914
+          "score": 0.524189
         },
         {
           "quarter": "2022-03-31",
-          "score": 0.559952
+          "score": 0.563898
         },
         {
           "quarter": "2022-06-30",
-          "score": 0.515934
+          "score": 0.490858
         },
         {
           "quarter": "2022-09-30",
-          "score": 0.558733
+          "score": 0.490729
         },
         {
           "quarter": "2022-12-31",
-          "score": 0.597891
+          "score": 0.469603
         },
         {
           "quarter": "2023-03-31",
-          "score": 0.515943
+          "score": 0.501065
         },
         {
           "quarter": "2023-06-30",
-          "score": 0.43586
+          "score": 0.516193
         },
         {
           "quarter": "2023-09-30",
-          "score": 0.521388
+          "score": 0.524193
         },
         {
           "quarter": "2023-12-31",
-          "score": 0.414973
+          "score": 0.489296
         },
         {
           "quarter": "2024-03-31",
-          "score": 0.428729
-        },
-        {
-          "quarter": "2024-06-30",
-          "score": 0.45031
-        },
-        {
-          "quarter": "2024-09-30",
-          "score": 0.423009
-        },
-        {
-          "quarter": "2024-12-31",
-          "score": 0.44873
-        },
-        {
-          "quarter": "2025-03-31",
-          "score": 0.493463
-        },
-        {
-          "quarter": "2025-06-30",
-          "score": 0.572431
-        },
-        {
-          "quarter": "2025-09-30",
-          "score": 0.559351
-        },
-        {
-          "quarter": "2025-12-31",
-          "score": 0.500698
+          "score": 0.520065
         }
       ],
-      "narrative": "Matador Resources screens as a mid-quality operator under the Caligula framework with a composite score of 0.50 (Tier C)."
-    },
-    "EOG": {
-      "ticker": "EOG",
-      "company": "EOG Resources",
-      "sector": "Energy",
-      "industry": "Oil & Gas Exploration & Production",
-      "tier": "A",
-      "composite": 0.663357,
-      "pillars": {
-        "unit_econ": 1.0,
-        "capital_discipline": 0.5,
-        "balance_sheet": 0.5,
-        "hedge_book": 0.806857,
-        "reserves": 1.0,
-        "operational": 0.5,
-        "sentiment": 0.5,
-        "macro": 0.5
-      },
-      "metrics": [
-        {
-          "metric": "Composite Score",
-          "value": "0.663357",
-          "score": 0.663357
-        },
-        {
-          "metric": "Unit Economics",
-          "value": "1.0",
-          "score": 1.0
-        },
-        {
-          "metric": "Capital Discipline",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Balance Sheet",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Hedge Book",
-          "value": "0.806857",
-          "score": 0.806857
-        },
-        {
-          "metric": "Reserves",
-          "value": "1.0",
-          "score": 1.0
-        },
-        {
-          "metric": "Operational",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Sentiment",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Macro Sensitivity",
-          "value": "0.5",
-          "score": 0.5
-        }
-      ],
-      "history": [
-        {
-          "quarter": "2014-03-31",
-          "score": 0.555312
-        },
-        {
-          "quarter": "2014-06-30",
-          "score": 0.485812
-        },
-        {
-          "quarter": "2014-09-30",
-          "score": 0.454813
-        },
-        {
-          "quarter": "2014-12-31",
-          "score": 0.586792
-        },
-        {
-          "quarter": "2015-03-31",
-          "score": 0.480125
-        },
-        {
-          "quarter": "2015-06-30",
-          "score": 0.473839
-        },
-        {
-          "quarter": "2015-09-30",
-          "score": 0.529589
-        },
-        {
-          "quarter": "2015-12-31",
-          "score": 0.526714
-        },
-        {
-          "quarter": "2016-03-31",
-          "score": 0.481339
-        },
-        {
-          "quarter": "2016-06-30",
-          "score": 0.495929
-        },
-        {
-          "quarter": "2016-09-30",
-          "score": 0.481429
-        },
-        {
-          "quarter": "2016-12-31",
-          "score": 0.489679
-        },
-        {
-          "quarter": "2017-03-31",
-          "score": 0.477179
-        },
-        {
-          "quarter": "2017-06-30",
-          "score": 0.494304
-        },
-        {
-          "quarter": "2017-09-30",
-          "score": 0.509429
-        },
-        {
-          "quarter": "2017-12-31",
-          "score": 0.577929
-        },
-        {
-          "quarter": "2018-03-31",
-          "score": 0.638988
-        },
-        {
-          "quarter": "2018-06-30",
-          "score": 0.542202
-        },
-        {
-          "quarter": "2018-09-30",
-          "score": 0.553988
-        },
-        {
-          "quarter": "2018-12-31",
-          "score": 0.647738
-        },
-        {
-          "quarter": "2019-03-31",
-          "score": 0.473393
-        },
-        {
-          "quarter": "2019-06-30",
-          "score": 0.520357
-        },
-        {
-          "quarter": "2019-09-30",
-          "score": 0.611518
-        },
-        {
-          "quarter": "2019-12-31",
-          "score": 0.500268
-        },
-        {
-          "quarter": "2020-03-31",
-          "score": 0.616583
-        },
-        {
-          "quarter": "2020-06-30",
-          "score": 0.512667
-        },
-        {
-          "quarter": "2020-09-30",
-          "score": 0.509444
-        },
-        {
-          "quarter": "2020-12-31",
-          "score": 0.479111
-        },
-        {
-          "quarter": "2021-03-31",
-          "score": 0.526333
-        },
-        {
-          "quarter": "2021-06-30",
-          "score": 0.552778
-        },
-        {
-          "quarter": "2021-09-30",
-          "score": 0.564444
-        },
-        {
-          "quarter": "2021-12-31",
-          "score": 0.55903
-        },
-        {
-          "quarter": "2022-03-31",
-          "score": 0.575848
-        },
-        {
-          "quarter": "2022-06-30",
-          "score": 0.560284
-        },
-        {
-          "quarter": "2022-09-30",
-          "score": 0.616877
-        },
-        {
-          "quarter": "2022-12-31",
-          "score": 0.542533
-        },
-        {
-          "quarter": "2023-03-31",
-          "score": 0.622002
-        },
-        {
-          "quarter": "2023-06-30",
-          "score": 0.630524
-        },
-        {
-          "quarter": "2023-09-30",
-          "score": 0.574514
-        },
-        {
-          "quarter": "2023-12-31",
-          "score": 0.531907
-        },
-        {
-          "quarter": "2024-03-31",
-          "score": 0.529874
-        },
-        {
-          "quarter": "2024-06-30",
-          "score": 0.612763
-        },
-        {
-          "quarter": "2024-09-30",
-          "score": 0.640418
-        },
-        {
-          "quarter": "2024-12-31",
-          "score": 0.571169
-        },
-        {
-          "quarter": "2025-03-31",
-          "score": 0.60316
-        },
-        {
-          "quarter": "2025-06-30",
-          "score": 0.572439
-        },
-        {
-          "quarter": "2025-09-30",
-          "score": 0.581494
-        },
-        {
-          "quarter": "2025-12-31",
-          "score": 0.64031
-        },
-        {
-          "quarter": "2026-03-31",
-          "score": 0.663357
-        }
-      ],
-      "narrative": "EOG Resources screens as a high-quality operator under the Caligula framework with a composite score of 0.66 (Tier A)."
+      "narrative": "Callon Petroleum screens as a mid-quality operator under the Caligula framework with a composite score of 0.52 (Tier C)."
     },
     "SM": {
       "ticker": "SM",
@@ -1127,6 +655,678 @@
       ],
       "narrative": "SM Energy screens as a mid-quality operator under the Caligula framework with a composite score of 0.47 (Tier C)."
     },
+    "PXD": {
+      "ticker": "PXD",
+      "company": "Pioneer Natural Resources",
+      "sector": "Energy",
+      "industry": "Oil & Gas Exploration & Production",
+      "tier": "C",
+      "composite": 0.41225,
+      "pillars": {
+        "unit_econ": 0.226496,
+        "capital_discipline": 0.381618,
+        "balance_sheet": 0.268731,
+        "hedge_book": 0.423077,
+        "reserves": 0.369231,
+        "operational": 0.523077,
+        "sentiment": 0.807692,
+        "macro": 0.538462
+      },
+      "metrics": [
+        {
+          "metric": "Composite Score",
+          "value": "0.41225",
+          "score": 0.41225
+        },
+        {
+          "metric": "Unit Economics",
+          "value": "0.226496",
+          "score": 0.226496
+        },
+        {
+          "metric": "Capital Discipline",
+          "value": "0.381618",
+          "score": 0.381618
+        },
+        {
+          "metric": "Balance Sheet",
+          "value": "0.268731",
+          "score": 0.268731
+        },
+        {
+          "metric": "Hedge Book",
+          "value": "0.423077",
+          "score": 0.423077
+        },
+        {
+          "metric": "Reserves",
+          "value": "0.369231",
+          "score": 0.369231
+        },
+        {
+          "metric": "Operational",
+          "value": "0.523077",
+          "score": 0.523077
+        },
+        {
+          "metric": "Sentiment",
+          "value": "0.807692",
+          "score": 0.807692
+        },
+        {
+          "metric": "Macro Sensitivity",
+          "value": "0.538462",
+          "score": 0.538462
+        }
+      ],
+      "history": [
+        {
+          "quarter": "2014-03-31",
+          "score": 0.571446
+        },
+        {
+          "quarter": "2014-06-30",
+          "score": 0.463821
+        },
+        {
+          "quarter": "2014-09-30",
+          "score": 0.525446
+        },
+        {
+          "quarter": "2014-12-31",
+          "score": 0.427696
+        },
+        {
+          "quarter": "2015-03-31",
+          "score": 0.448446
+        },
+        {
+          "quarter": "2015-06-30",
+          "score": 0.429679
+        },
+        {
+          "quarter": "2015-09-30",
+          "score": 0.436554
+        },
+        {
+          "quarter": "2015-12-31",
+          "score": 0.505679
+        },
+        {
+          "quarter": "2016-03-31",
+          "score": 0.525893
+        },
+        {
+          "quarter": "2016-06-30",
+          "score": 0.493268
+        },
+        {
+          "quarter": "2016-09-30",
+          "score": 0.444643
+        },
+        {
+          "quarter": "2016-12-31",
+          "score": 0.510286
+        },
+        {
+          "quarter": "2017-03-31",
+          "score": 0.581536
+        },
+        {
+          "quarter": "2017-06-30",
+          "score": 0.469661
+        },
+        {
+          "quarter": "2017-09-30",
+          "score": 0.533161
+        },
+        {
+          "quarter": "2017-12-31",
+          "score": 0.571911
+        },
+        {
+          "quarter": "2018-03-31",
+          "score": 0.515863
+        },
+        {
+          "quarter": "2018-06-30",
+          "score": 0.559577
+        },
+        {
+          "quarter": "2018-09-30",
+          "score": 0.544577
+        },
+        {
+          "quarter": "2018-12-31",
+          "score": 0.468577
+        },
+        {
+          "quarter": "2019-03-31",
+          "score": 0.547556
+        },
+        {
+          "quarter": "2019-06-30",
+          "score": 0.539758
+        },
+        {
+          "quarter": "2019-09-30",
+          "score": 0.584329
+        },
+        {
+          "quarter": "2019-12-31",
+          "score": 0.604633
+        },
+        {
+          "quarter": "2020-03-31",
+          "score": 0.471714
+        },
+        {
+          "quarter": "2020-06-30",
+          "score": 0.448778
+        },
+        {
+          "quarter": "2020-09-30",
+          "score": 0.419333
+        },
+        {
+          "quarter": "2020-12-31",
+          "score": 0.472254
+        },
+        {
+          "quarter": "2021-03-31",
+          "score": 0.554952
+        },
+        {
+          "quarter": "2021-06-30",
+          "score": 0.522286
+        },
+        {
+          "quarter": "2021-09-30",
+          "score": 0.48573
+        },
+        {
+          "quarter": "2021-12-31",
+          "score": 0.475091
+        },
+        {
+          "quarter": "2022-03-31",
+          "score": 0.483119
+        },
+        {
+          "quarter": "2022-06-30",
+          "score": 0.455411
+        },
+        {
+          "quarter": "2022-09-30",
+          "score": 0.444085
+        },
+        {
+          "quarter": "2022-12-31",
+          "score": 0.473239
+        },
+        {
+          "quarter": "2023-03-31",
+          "score": 0.470547
+        },
+        {
+          "quarter": "2023-06-30",
+          "score": 0.491295
+        },
+        {
+          "quarter": "2023-09-30",
+          "score": 0.440384
+        },
+        {
+          "quarter": "2023-12-31",
+          "score": 0.460845
+        },
+        {
+          "quarter": "2024-03-31",
+          "score": 0.41225
+        }
+      ],
+      "narrative": "Pioneer Natural Resources screens as a lower-quality operator under the Caligula framework with a composite score of 0.41 (Tier C)."
+    },
+    "EOG": {
+      "ticker": "EOG",
+      "company": "EOG Resources",
+      "sector": "Energy",
+      "industry": "Oil & Gas Exploration & Production",
+      "tier": "B",
+      "composite": 0.64031,
+      "pillars": {
+        "unit_econ": 0.402778,
+        "capital_discipline": 0.861905,
+        "balance_sheet": 0.892857,
+        "hedge_book": 0.533333,
+        "reserves": 0.47381,
+        "operational": 0.65,
+        "sentiment": 0.711111,
+        "macro": 0.628395
+      },
+      "metrics": [
+        {
+          "metric": "Composite Score",
+          "value": "0.64031",
+          "score": 0.64031
+        },
+        {
+          "metric": "Unit Economics",
+          "value": "0.402778",
+          "score": 0.402778
+        },
+        {
+          "metric": "Capital Discipline",
+          "value": "0.861905",
+          "score": 0.861905
+        },
+        {
+          "metric": "Balance Sheet",
+          "value": "0.892857",
+          "score": 0.892857
+        },
+        {
+          "metric": "Hedge Book",
+          "value": "0.533333",
+          "score": 0.533333
+        },
+        {
+          "metric": "Reserves",
+          "value": "0.47381",
+          "score": 0.47381
+        },
+        {
+          "metric": "Operational",
+          "value": "0.65",
+          "score": 0.65
+        },
+        {
+          "metric": "Sentiment",
+          "value": "0.711111",
+          "score": 0.711111
+        },
+        {
+          "metric": "Macro Sensitivity",
+          "value": "0.628395",
+          "score": 0.628395
+        }
+      ],
+      "history": [
+        {
+          "quarter": "2014-03-31",
+          "score": 0.555312
+        },
+        {
+          "quarter": "2014-06-30",
+          "score": 0.485812
+        },
+        {
+          "quarter": "2014-09-30",
+          "score": 0.454813
+        },
+        {
+          "quarter": "2014-12-31",
+          "score": 0.586792
+        },
+        {
+          "quarter": "2015-03-31",
+          "score": 0.480125
+        },
+        {
+          "quarter": "2015-06-30",
+          "score": 0.473839
+        },
+        {
+          "quarter": "2015-09-30",
+          "score": 0.529589
+        },
+        {
+          "quarter": "2015-12-31",
+          "score": 0.526714
+        },
+        {
+          "quarter": "2016-03-31",
+          "score": 0.481339
+        },
+        {
+          "quarter": "2016-06-30",
+          "score": 0.495929
+        },
+        {
+          "quarter": "2016-09-30",
+          "score": 0.481429
+        },
+        {
+          "quarter": "2016-12-31",
+          "score": 0.489679
+        },
+        {
+          "quarter": "2017-03-31",
+          "score": 0.477179
+        },
+        {
+          "quarter": "2017-06-30",
+          "score": 0.494304
+        },
+        {
+          "quarter": "2017-09-30",
+          "score": 0.509429
+        },
+        {
+          "quarter": "2017-12-31",
+          "score": 0.577929
+        },
+        {
+          "quarter": "2018-03-31",
+          "score": 0.638988
+        },
+        {
+          "quarter": "2018-06-30",
+          "score": 0.542202
+        },
+        {
+          "quarter": "2018-09-30",
+          "score": 0.553988
+        },
+        {
+          "quarter": "2018-12-31",
+          "score": 0.647738
+        },
+        {
+          "quarter": "2019-03-31",
+          "score": 0.473393
+        },
+        {
+          "quarter": "2019-06-30",
+          "score": 0.520357
+        },
+        {
+          "quarter": "2019-09-30",
+          "score": 0.611518
+        },
+        {
+          "quarter": "2019-12-31",
+          "score": 0.500268
+        },
+        {
+          "quarter": "2020-03-31",
+          "score": 0.616583
+        },
+        {
+          "quarter": "2020-06-30",
+          "score": 0.512667
+        },
+        {
+          "quarter": "2020-09-30",
+          "score": 0.509444
+        },
+        {
+          "quarter": "2020-12-31",
+          "score": 0.479111
+        },
+        {
+          "quarter": "2021-03-31",
+          "score": 0.526333
+        },
+        {
+          "quarter": "2021-06-30",
+          "score": 0.552778
+        },
+        {
+          "quarter": "2021-09-30",
+          "score": 0.564444
+        },
+        {
+          "quarter": "2021-12-31",
+          "score": 0.55903
+        },
+        {
+          "quarter": "2022-03-31",
+          "score": 0.575848
+        },
+        {
+          "quarter": "2022-06-30",
+          "score": 0.560284
+        },
+        {
+          "quarter": "2022-09-30",
+          "score": 0.616877
+        },
+        {
+          "quarter": "2022-12-31",
+          "score": 0.542533
+        },
+        {
+          "quarter": "2023-03-31",
+          "score": 0.622002
+        },
+        {
+          "quarter": "2023-06-30",
+          "score": 0.630524
+        },
+        {
+          "quarter": "2023-09-30",
+          "score": 0.574514
+        },
+        {
+          "quarter": "2023-12-31",
+          "score": 0.531907
+        },
+        {
+          "quarter": "2024-03-31",
+          "score": 0.529874
+        },
+        {
+          "quarter": "2024-06-30",
+          "score": 0.612763
+        },
+        {
+          "quarter": "2024-09-30",
+          "score": 0.640418
+        },
+        {
+          "quarter": "2024-12-31",
+          "score": 0.571169
+        },
+        {
+          "quarter": "2025-03-31",
+          "score": 0.60316
+        },
+        {
+          "quarter": "2025-06-30",
+          "score": 0.572439
+        },
+        {
+          "quarter": "2025-09-30",
+          "score": 0.581494
+        },
+        {
+          "quarter": "2025-12-31",
+          "score": 0.64031
+        }
+      ],
+      "narrative": "EOG Resources screens as a mid-quality operator under the Caligula framework with a composite score of 0.64 (Tier B)."
+    },
+    "CXO": {
+      "ticker": "CXO",
+      "company": "Concho Resources",
+      "sector": "Energy",
+      "industry": "Oil & Gas Exploration & Production",
+      "tier": "C",
+      "composite": 0.507694,
+      "pillars": {
+        "unit_econ": 0.688272,
+        "capital_discipline": 0.5,
+        "balance_sheet": 0.330357,
+        "hedge_book": 0.666667,
+        "reserves": 0.655556,
+        "operational": 0.316667,
+        "sentiment": 0.222222,
+        "macro": 0.555556
+      },
+      "metrics": [
+        {
+          "metric": "Composite Score",
+          "value": "0.507694",
+          "score": 0.507694
+        },
+        {
+          "metric": "Unit Economics",
+          "value": "0.688272",
+          "score": 0.688272
+        },
+        {
+          "metric": "Capital Discipline",
+          "value": "0.5",
+          "score": 0.5
+        },
+        {
+          "metric": "Balance Sheet",
+          "value": "0.330357",
+          "score": 0.330357
+        },
+        {
+          "metric": "Hedge Book",
+          "value": "0.666667",
+          "score": 0.666667
+        },
+        {
+          "metric": "Reserves",
+          "value": "0.655556",
+          "score": 0.655556
+        },
+        {
+          "metric": "Operational",
+          "value": "0.316667",
+          "score": 0.316667
+        },
+        {
+          "metric": "Sentiment",
+          "value": "0.222222",
+          "score": 0.222222
+        },
+        {
+          "metric": "Macro Sensitivity",
+          "value": "0.555556",
+          "score": 0.555556
+        }
+      ],
+      "history": [
+        {
+          "quarter": "2014-03-31",
+          "score": 0.540125
+        },
+        {
+          "quarter": "2014-06-30",
+          "score": 0.570375
+        },
+        {
+          "quarter": "2014-09-30",
+          "score": 0.421875
+        },
+        {
+          "quarter": "2014-12-31",
+          "score": 0.544
+        },
+        {
+          "quarter": "2015-03-31",
+          "score": 0.567375
+        },
+        {
+          "quarter": "2015-06-30",
+          "score": 0.519625
+        },
+        {
+          "quarter": "2015-09-30",
+          "score": 0.523875
+        },
+        {
+          "quarter": "2015-12-31",
+          "score": 0.49975
+        },
+        {
+          "quarter": "2016-03-31",
+          "score": 0.610786
+        },
+        {
+          "quarter": "2016-06-30",
+          "score": 0.703125
+        },
+        {
+          "quarter": "2016-09-30",
+          "score": 0.502214
+        },
+        {
+          "quarter": "2016-12-31",
+          "score": 0.554018
+        },
+        {
+          "quarter": "2017-03-31",
+          "score": 0.555946
+        },
+        {
+          "quarter": "2017-06-30",
+          "score": 0.499946
+        },
+        {
+          "quarter": "2017-09-30",
+          "score": 0.493661
+        },
+        {
+          "quarter": "2017-12-31",
+          "score": 0.510982
+        },
+        {
+          "quarter": "2018-03-31",
+          "score": 0.557607
+        },
+        {
+          "quarter": "2018-06-30",
+          "score": 0.595768
+        },
+        {
+          "quarter": "2018-09-30",
+          "score": 0.467357
+        },
+        {
+          "quarter": "2018-12-31",
+          "score": 0.501429
+        },
+        {
+          "quarter": "2019-03-31",
+          "score": 0.565171
+        },
+        {
+          "quarter": "2019-06-30",
+          "score": 0.586207
+        },
+        {
+          "quarter": "2019-09-30",
+          "score": 0.500707
+        },
+        {
+          "quarter": "2019-12-31",
+          "score": 0.524707
+        },
+        {
+          "quarter": "2020-03-31",
+          "score": 0.467635
+        },
+        {
+          "quarter": "2020-06-30",
+          "score": 0.471833
+        },
+        {
+          "quarter": "2020-09-30",
+          "score": 0.498944
+        },
+        {
+          "quarter": "2020-12-31",
+          "score": 0.507694
+        }
+      ],
+      "narrative": "Concho Resources screens as a mid-quality operator under the Caligula framework with a composite score of 0.51 (Tier C)."
+    },
     "VTLE": {
       "ticker": "VTLE",
       "company": "Vital Energy (fka Laredo Petroleum)",
@@ -1383,653 +1583,525 @@
       ],
       "narrative": "Vital Energy (fka Laredo Petroleum) screens as a mid-quality operator under the Caligula framework with a composite score of 0.51 (Tier C)."
     },
-    "PXD": {
-      "ticker": "PXD",
-      "company": "Pioneer Natural Resources",
-      "sector": "Energy",
-      "industry": "Oil & Gas Exploration & Production",
-      "tier": "D",
-      "composite": 0.348214,
-      "pillars": {
-        "unit_econ": 0.0,
-        "capital_discipline": 0.5,
-        "balance_sheet": 0.5,
-        "hedge_book": 0.0,
-        "reserves": 0.285714,
-        "operational": 0.5,
-        "sentiment": 0.5,
-        "macro": 0.5
-      },
-      "metrics": [
-        {
-          "metric": "Composite Score",
-          "value": "0.348214",
-          "score": 0.348214
-        },
-        {
-          "metric": "Unit Economics",
-          "value": "0.0",
-          "score": 0.0
-        },
-        {
-          "metric": "Capital Discipline",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Balance Sheet",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Hedge Book",
-          "value": "0.0",
-          "score": 0.0
-        },
-        {
-          "metric": "Reserves",
-          "value": "0.285714",
-          "score": 0.285714
-        },
-        {
-          "metric": "Operational",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Sentiment",
-          "value": "0.5",
-          "score": 0.5
-        },
-        {
-          "metric": "Macro Sensitivity",
-          "value": "0.5",
-          "score": 0.5
-        }
-      ],
-      "history": [
-        {
-          "quarter": "2014-03-31",
-          "score": 0.571446
-        },
-        {
-          "quarter": "2014-06-30",
-          "score": 0.463821
-        },
-        {
-          "quarter": "2014-09-30",
-          "score": 0.525446
-        },
-        {
-          "quarter": "2014-12-31",
-          "score": 0.427696
-        },
-        {
-          "quarter": "2015-03-31",
-          "score": 0.448446
-        },
-        {
-          "quarter": "2015-06-30",
-          "score": 0.429679
-        },
-        {
-          "quarter": "2015-09-30",
-          "score": 0.436554
-        },
-        {
-          "quarter": "2015-12-31",
-          "score": 0.505679
-        },
-        {
-          "quarter": "2016-03-31",
-          "score": 0.525893
-        },
-        {
-          "quarter": "2016-06-30",
-          "score": 0.493268
-        },
-        {
-          "quarter": "2016-09-30",
-          "score": 0.444643
-        },
-        {
-          "quarter": "2016-12-31",
-          "score": 0.510286
-        },
-        {
-          "quarter": "2017-03-31",
-          "score": 0.581536
-        },
-        {
-          "quarter": "2017-06-30",
-          "score": 0.469661
-        },
-        {
-          "quarter": "2017-09-30",
-          "score": 0.533161
-        },
-        {
-          "quarter": "2017-12-31",
-          "score": 0.571911
-        },
-        {
-          "quarter": "2018-03-31",
-          "score": 0.515863
-        },
-        {
-          "quarter": "2018-06-30",
-          "score": 0.559577
-        },
-        {
-          "quarter": "2018-09-30",
-          "score": 0.544577
-        },
-        {
-          "quarter": "2018-12-31",
-          "score": 0.468577
-        },
-        {
-          "quarter": "2019-03-31",
-          "score": 0.547556
-        },
-        {
-          "quarter": "2019-06-30",
-          "score": 0.539758
-        },
-        {
-          "quarter": "2019-09-30",
-          "score": 0.584329
-        },
-        {
-          "quarter": "2019-12-31",
-          "score": 0.604633
-        },
-        {
-          "quarter": "2020-03-31",
-          "score": 0.471714
-        },
-        {
-          "quarter": "2020-06-30",
-          "score": 0.448778
-        },
-        {
-          "quarter": "2020-09-30",
-          "score": 0.419333
-        },
-        {
-          "quarter": "2020-12-31",
-          "score": 0.472254
-        },
-        {
-          "quarter": "2021-03-31",
-          "score": 0.554952
-        },
-        {
-          "quarter": "2021-06-30",
-          "score": 0.522286
-        },
-        {
-          "quarter": "2021-09-30",
-          "score": 0.48573
-        },
-        {
-          "quarter": "2021-12-31",
-          "score": 0.475091
-        },
-        {
-          "quarter": "2022-03-31",
-          "score": 0.483119
-        },
-        {
-          "quarter": "2022-06-30",
-          "score": 0.455411
-        },
-        {
-          "quarter": "2022-09-30",
-          "score": 0.444085
-        },
-        {
-          "quarter": "2022-12-31",
-          "score": 0.473239
-        },
-        {
-          "quarter": "2023-03-31",
-          "score": 0.470547
-        },
-        {
-          "quarter": "2023-06-30",
-          "score": 0.491295
-        },
-        {
-          "quarter": "2023-09-30",
-          "score": 0.440384
-        },
-        {
-          "quarter": "2023-12-31",
-          "score": 0.460845
-        },
-        {
-          "quarter": "2024-03-31",
-          "score": 0.41225
-        },
-        {
-          "quarter": "2026-03-31",
-          "score": 0.348214
-        }
-      ],
-      "narrative": "Pioneer Natural Resources screens as a lower-quality operator under the Caligula framework with a composite score of 0.35 (Tier D)."
-    },
-    "CPE": {
-      "ticker": "CPE",
-      "company": "Callon Petroleum",
+    "MTDR": {
+      "ticker": "MTDR",
+      "company": "Matador Resources",
       "sector": "Energy",
       "industry": "Oil & Gas Exploration & Production",
       "tier": "C",
-      "composite": 0.520065,
+      "composite": 0.500698,
       "pillars": {
-        "unit_econ": 0.568376,
-        "capital_discipline": 0.448551,
-        "balance_sheet": 0.697344,
-        "hedge_book": 0.730769,
-        "reserves": 0.546154,
-        "operational": 0.357692,
-        "sentiment": 0.153846,
-        "macro": 0.538462
+        "unit_econ": 0.455556,
+        "capital_discipline": 0.355873,
+        "balance_sheet": 0.507143,
+        "hedge_book": 0.366667,
+        "reserves": 0.570238,
+        "operational": 0.75,
+        "sentiment": 0.67,
+        "macro": 0.44321
       },
       "metrics": [
         {
           "metric": "Composite Score",
-          "value": "0.520065",
-          "score": 0.520065
+          "value": "0.500698",
+          "score": 0.500698
         },
         {
           "metric": "Unit Economics",
-          "value": "0.568376",
-          "score": 0.568376
+          "value": "0.455556",
+          "score": 0.455556
         },
         {
           "metric": "Capital Discipline",
-          "value": "0.448551",
-          "score": 0.448551
+          "value": "0.355873",
+          "score": 0.355873
         },
         {
           "metric": "Balance Sheet",
-          "value": "0.697344",
-          "score": 0.697344
+          "value": "0.507143",
+          "score": 0.507143
         },
         {
           "metric": "Hedge Book",
-          "value": "0.730769",
-          "score": 0.730769
+          "value": "0.366667",
+          "score": 0.366667
         },
         {
           "metric": "Reserves",
-          "value": "0.546154",
-          "score": 0.546154
+          "value": "0.570238",
+          "score": 0.570238
         },
         {
           "metric": "Operational",
-          "value": "0.357692",
-          "score": 0.357692
+          "value": "0.75",
+          "score": 0.75
         },
         {
           "metric": "Sentiment",
-          "value": "0.153846",
-          "score": 0.153846
+          "value": "0.67",
+          "score": 0.67
         },
         {
           "metric": "Macro Sensitivity",
-          "value": "0.538462",
-          "score": 0.538462
+          "value": "0.44321",
+          "score": 0.44321
         }
       ],
       "history": [
         {
           "quarter": "2014-03-31",
-          "score": 0.586357
+          "score": 0.478848
         },
         {
           "quarter": "2014-06-30",
-          "score": 0.624679
+          "score": 0.572759
         },
         {
           "quarter": "2014-09-30",
-          "score": 0.672054
+          "score": 0.642384
         },
         {
           "quarter": "2014-12-31",
-          "score": 0.578554
+          "score": 0.61178
         },
         {
           "quarter": "2015-03-31",
-          "score": 0.588268
+          "score": 0.589321
         },
         {
           "quarter": "2015-06-30",
-          "score": 0.630179
+          "score": 0.610464
         },
         {
           "quarter": "2015-09-30",
-          "score": 0.595804
+          "score": 0.487964
         },
         {
           "quarter": "2015-12-31",
-          "score": 0.687536
+          "score": 0.518839
         },
         {
           "quarter": "2016-03-31",
-          "score": 0.542804
+          "score": 0.564339
         },
         {
           "quarter": "2016-06-30",
-          "score": 0.640839
+          "score": 0.390714
         },
         {
           "quarter": "2016-09-30",
-          "score": 0.635125
+          "score": 0.483714
         },
         {
           "quarter": "2016-12-31",
-          "score": 0.515054
+          "score": 0.501714
         },
         {
           "quarter": "2017-03-31",
-          "score": 0.570768
+          "score": 0.558839
         },
         {
           "quarter": "2017-06-30",
-          "score": 0.631071
+          "score": 0.551839
         },
         {
           "quarter": "2017-09-30",
-          "score": 0.492911
+          "score": 0.623339
         },
         {
           "quarter": "2017-12-31",
-          "score": 0.532911
+          "score": 0.589714
         },
         {
           "quarter": "2018-03-31",
-          "score": 0.436964
+          "score": 0.448214
         },
         {
           "quarter": "2018-06-30",
-          "score": 0.511714
+          "score": 0.483018
         },
         {
           "quarter": "2018-09-30",
-          "score": 0.522964
+          "score": 0.562393
         },
         {
           "quarter": "2018-12-31",
-          "score": 0.481214
+          "score": 0.553518
         },
         {
           "quarter": "2019-03-31",
-          "score": 0.636212
+          "score": 0.573988
         },
         {
           "quarter": "2019-06-30",
-          "score": 0.521283
+          "score": 0.498363
         },
         {
           "quarter": "2019-09-30",
-          "score": 0.487265
+          "score": 0.501101
         },
         {
           "quarter": "2019-12-31",
-          "score": 0.452605
+          "score": 0.474851
         },
         {
           "quarter": "2020-03-31",
-          "score": 0.480083
+          "score": 0.541833
         },
         {
           "quarter": "2020-06-30",
-          "score": 0.451258
+          "score": 0.584722
         },
         {
           "quarter": "2020-09-30",
-          "score": 0.527036
+          "score": 0.534694
         },
         {
           "quarter": "2020-12-31",
-          "score": 0.425702
+          "score": 0.491806
         },
         {
           "quarter": "2021-03-31",
-          "score": 0.434369
+          "score": 0.407583
         },
         {
           "quarter": "2021-06-30",
-          "score": 0.490639
+          "score": 0.491694
         },
         {
           "quarter": "2021-09-30",
-          "score": 0.525909
+          "score": 0.505639
         },
         {
           "quarter": "2021-12-31",
-          "score": 0.524189
+          "score": 0.499914
         },
         {
           "quarter": "2022-03-31",
-          "score": 0.563898
+          "score": 0.559952
         },
         {
           "quarter": "2022-06-30",
-          "score": 0.490858
+          "score": 0.515934
         },
         {
           "quarter": "2022-09-30",
-          "score": 0.490729
+          "score": 0.558733
         },
         {
           "quarter": "2022-12-31",
-          "score": 0.469603
+          "score": 0.597891
         },
         {
           "quarter": "2023-03-31",
-          "score": 0.501065
+          "score": 0.515943
         },
         {
           "quarter": "2023-06-30",
-          "score": 0.516193
+          "score": 0.43586
         },
         {
           "quarter": "2023-09-30",
-          "score": 0.524193
+          "score": 0.521388
         },
         {
           "quarter": "2023-12-31",
-          "score": 0.489296
+          "score": 0.414973
         },
         {
           "quarter": "2024-03-31",
-          "score": 0.520065
+          "score": 0.428729
+        },
+        {
+          "quarter": "2024-06-30",
+          "score": 0.45031
+        },
+        {
+          "quarter": "2024-09-30",
+          "score": 0.423009
+        },
+        {
+          "quarter": "2024-12-31",
+          "score": 0.44873
+        },
+        {
+          "quarter": "2025-03-31",
+          "score": 0.493463
+        },
+        {
+          "quarter": "2025-06-30",
+          "score": 0.572431
+        },
+        {
+          "quarter": "2025-09-30",
+          "score": 0.559351
+        },
+        {
+          "quarter": "2025-12-31",
+          "score": 0.500698
         }
       ],
-      "narrative": "Callon Petroleum screens as a mid-quality operator under the Caligula framework with a composite score of 0.52 (Tier C)."
+      "narrative": "Matador Resources screens as a mid-quality operator under the Caligula framework with a composite score of 0.50 (Tier C)."
     },
-    "CXO": {
-      "ticker": "CXO",
-      "company": "Concho Resources",
+    "FANG": {
+      "ticker": "FANG",
+      "company": "Diamondback Energy",
       "sector": "Energy",
       "industry": "Oil & Gas Exploration & Production",
-      "tier": "C",
-      "composite": 0.507694,
+      "tier": "B",
+      "composite": 0.565016,
       "pillars": {
-        "unit_econ": 0.688272,
-        "capital_discipline": 0.5,
-        "balance_sheet": 0.330357,
-        "hedge_book": 0.666667,
-        "reserves": 0.655556,
-        "operational": 0.316667,
-        "sentiment": 0.222222,
-        "macro": 0.555556
+        "unit_econ": 0.797222,
+        "capital_discipline": 0.423492,
+        "balance_sheet": 0.571429,
+        "hedge_book": 0.433333,
+        "reserves": 0.530952,
+        "operational": 0.655,
+        "sentiment": 0.48,
+        "macro": 0.541975
       },
       "metrics": [
         {
           "metric": "Composite Score",
-          "value": "0.507694",
-          "score": 0.507694
+          "value": "0.565016",
+          "score": 0.565016
         },
         {
           "metric": "Unit Economics",
-          "value": "0.688272",
-          "score": 0.688272
+          "value": "0.797222",
+          "score": 0.797222
         },
         {
           "metric": "Capital Discipline",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.423492",
+          "score": 0.423492
         },
         {
           "metric": "Balance Sheet",
-          "value": "0.330357",
-          "score": 0.330357
+          "value": "0.571429",
+          "score": 0.571429
         },
         {
           "metric": "Hedge Book",
-          "value": "0.666667",
-          "score": 0.666667
+          "value": "0.433333",
+          "score": 0.433333
         },
         {
           "metric": "Reserves",
-          "value": "0.655556",
-          "score": 0.655556
+          "value": "0.530952",
+          "score": 0.530952
         },
         {
           "metric": "Operational",
-          "value": "0.316667",
-          "score": 0.316667
+          "value": "0.655",
+          "score": 0.655
         },
         {
           "metric": "Sentiment",
-          "value": "0.222222",
-          "score": 0.222222
+          "value": "0.48",
+          "score": 0.48
         },
         {
           "metric": "Macro Sensitivity",
-          "value": "0.555556",
-          "score": 0.555556
+          "value": "0.541975",
+          "score": 0.541975
         }
       ],
       "history": [
         {
           "quarter": "2014-03-31",
-          "score": 0.540125
+          "score": 0.431116
         },
         {
           "quarter": "2014-06-30",
-          "score": 0.570375
+          "score": 0.46317
         },
         {
           "quarter": "2014-09-30",
-          "score": 0.421875
+          "score": 0.44877
         },
         {
           "quarter": "2014-12-31",
-          "score": 0.544
+          "score": 0.46444
         },
         {
           "quarter": "2015-03-31",
-          "score": 0.567375
+          "score": 0.462922
         },
         {
           "quarter": "2015-06-30",
-          "score": 0.519625
+          "score": 0.539058
         },
         {
           "quarter": "2015-09-30",
-          "score": 0.523875
+          "score": 0.52138
         },
         {
           "quarter": "2015-12-31",
-          "score": 0.49975
+          "score": 0.489951
         },
         {
           "quarter": "2016-03-31",
-          "score": 0.610786
+          "score": 0.529032
         },
         {
           "quarter": "2016-06-30",
-          "score": 0.703125
+          "score": 0.483675
         },
         {
           "quarter": "2016-09-30",
-          "score": 0.502214
+          "score": 0.434925
         },
         {
           "quarter": "2016-12-31",
-          "score": 0.554018
+          "score": 0.561248
         },
         {
           "quarter": "2017-03-31",
-          "score": 0.555946
+          "score": 0.477195
         },
         {
           "quarter": "2017-06-30",
-          "score": 0.499946
+          "score": 0.455232
         },
         {
           "quarter": "2017-09-30",
-          "score": 0.493661
+          "score": 0.511304
         },
         {
           "quarter": "2017-12-31",
-          "score": 0.510982
+          "score": 0.404964
         },
         {
           "quarter": "2018-03-31",
-          "score": 0.557607
+          "score": 0.55497
         },
         {
           "quarter": "2018-06-30",
-          "score": 0.595768
+          "score": 0.50247
         },
         {
           "quarter": "2018-09-30",
-          "score": 0.467357
+          "score": 0.424345
         },
         {
           "quarter": "2018-12-31",
-          "score": 0.501429
+          "score": 0.55881
         },
         {
           "quarter": "2019-03-31",
-          "score": 0.565171
+          "score": 0.392887
         },
         {
           "quarter": "2019-06-30",
-          "score": 0.586207
+          "score": 0.498601
         },
         {
           "quarter": "2019-09-30",
-          "score": 0.500707
+          "score": 0.459613
         },
         {
           "quarter": "2019-12-31",
-          "score": 0.524707
+          "score": 0.549613
         },
         {
           "quarter": "2020-03-31",
-          "score": 0.467635
+          "score": 0.514667
         },
         {
           "quarter": "2020-06-30",
-          "score": 0.471833
+          "score": 0.484917
         },
         {
           "quarter": "2020-09-30",
-          "score": 0.498944
+          "score": 0.562028
         },
         {
           "quarter": "2020-12-31",
-          "score": 0.507694
+          "score": 0.501722
+        },
+        {
+          "quarter": "2021-03-31",
+          "score": 0.487944
+        },
+        {
+          "quarter": "2021-06-30",
+          "score": 0.541389
+        },
+        {
+          "quarter": "2021-09-30",
+          "score": 0.476167
+        },
+        {
+          "quarter": "2021-12-31",
+          "score": 0.412242
+        },
+        {
+          "quarter": "2022-03-31",
+          "score": 0.440062
+        },
+        {
+          "quarter": "2022-06-30",
+          "score": 0.525478
+        },
+        {
+          "quarter": "2022-09-30",
+          "score": 0.57788
+        },
+        {
+          "quarter": "2022-12-31",
+          "score": 0.503267
+        },
+        {
+          "quarter": "2023-03-31",
+          "score": 0.557689
+        },
+        {
+          "quarter": "2023-06-30",
+          "score": 0.532117
+        },
+        {
+          "quarter": "2023-09-30",
+          "score": 0.572252
+        },
+        {
+          "quarter": "2023-12-31",
+          "score": 0.549987
+        },
+        {
+          "quarter": "2024-03-31",
+          "score": 0.561788
+        },
+        {
+          "quarter": "2024-06-30",
+          "score": 0.501284
+        },
+        {
+          "quarter": "2024-09-30",
+          "score": 0.528001
+        },
+        {
+          "quarter": "2024-12-31",
+          "score": 0.452821
+        },
+        {
+          "quarter": "2025-03-31",
+          "score": 0.491429
+        },
+        {
+          "quarter": "2025-06-30",
+          "score": 0.509192
+        },
+        {
+          "quarter": "2025-09-30",
+          "score": 0.530065
+        },
+        {
+          "quarter": "2025-12-31",
+          "score": 0.565016
         }
       ],
-      "narrative": "Concho Resources screens as a mid-quality operator under the Caligula framework with a composite score of 0.51 (Tier C)."
+      "narrative": "Diamondback Energy screens as a mid-quality operator under the Caligula framework with a composite score of 0.57 (Tier B)."
     },
     "OVV": {
       "ticker": "OVV",
@@ -2348,63 +2420,63 @@
       "company": "Coterra Energy",
       "sector": "Energy",
       "industry": "Oil & Gas Exploration & Production",
-      "tier": "C",
-      "composite": 0.46875,
+      "tier": "B",
+      "composite": 0.591911,
       "pillars": {
-        "unit_econ": 0.25,
-        "capital_discipline": 0.5,
-        "balance_sheet": 0.5,
-        "hedge_book": 1.0,
-        "reserves": 0.0,
-        "operational": 0.5,
-        "sentiment": 0.5,
-        "macro": 0.5
+        "unit_econ": 0.513889,
+        "capital_discipline": 0.8,
+        "balance_sheet": 0.59,
+        "hedge_book": 0.7,
+        "reserves": 0.435,
+        "operational": 0.555,
+        "sentiment": 0.541111,
+        "macro": 0.566667
       },
       "metrics": [
         {
           "metric": "Composite Score",
-          "value": "0.46875",
-          "score": 0.46875
+          "value": "0.591911",
+          "score": 0.591911
         },
         {
           "metric": "Unit Economics",
-          "value": "0.25",
-          "score": 0.25
+          "value": "0.513889",
+          "score": 0.513889
         },
         {
           "metric": "Capital Discipline",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.8",
+          "score": 0.8
         },
         {
           "metric": "Balance Sheet",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.59",
+          "score": 0.59
         },
         {
           "metric": "Hedge Book",
-          "value": "1.0",
-          "score": 1.0
+          "value": "0.7",
+          "score": 0.7
         },
         {
           "metric": "Reserves",
-          "value": "0.0",
-          "score": 0.0
+          "value": "0.435",
+          "score": 0.435
         },
         {
           "metric": "Operational",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.555",
+          "score": 0.555
         },
         {
           "metric": "Sentiment",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.541111",
+          "score": 0.541111
         },
         {
           "metric": "Macro Sensitivity",
-          "value": "0.5",
-          "score": 0.5
+          "value": "0.566667",
+          "score": 0.566667
         }
       ],
       "history": [
@@ -2475,13 +2547,9 @@
         {
           "quarter": "2025-12-31",
           "score": 0.591911
-        },
-        {
-          "quarter": "2026-03-31",
-          "score": 0.46875
         }
       ],
-      "narrative": "Coterra Energy screens as a mid-quality operator under the Caligula framework with a composite score of 0.47 (Tier C)."
+      "narrative": "Coterra Energy screens as a mid-quality operator under the Caligula framework with a composite score of 0.59 (Tier B)."
     },
     "CRGY": {
       "ticker": "CRGY",
@@ -2894,41 +2962,41 @@
   ],
   "performance_ledger": [
     {
-      "long_return": 1.25,
-      "short_return": 0.4,
-      "long_short_return": 0.85,
-      "benchmark_return": 0.5,
-      "excess_return": 0.35,
-      "cagr": 0.12,
-      "annualized_volatility": 0.22,
-      "sharpe": 0.45,
-      "sortino": 0.65,
-      "max_drawdown": -0.35,
-      "calmar": 0.34,
-      "spearman_ic": 0.04,
-      "pearson_ic": 0.035,
-      "ic_tstat": 2.1,
-      "hit_rate": 0.55,
-      "p_value": 0.01,
-      "newey_west_tstat": 2.5,
-      "bootstrap_ci_low": 0.02,
-      "bootstrap_ci_high": 0.08,
-      "turnover": 0.3,
-      "average_names_held": 20,
-      "concentration_hhi": 0.05,
-      "portfolio_beta": 0.95,
-      "sector_beta": 1.05,
-      "oil_beta": 0.85,
-      "gas_beta": 0.15,
-      "size_exposure": 0.02,
-      "value_exposure": 0.4,
-      "leverage_exposure": -0.1,
-      "momentum_exposure": 0.2,
+      "long_return": -0.244361,
+      "short_return": 1.155682,
+      "long_short_return": -1.189904,
+      "benchmark_return": -0.146465,
+      "excess_return": -1.043439,
+      "cagr": NaN,
+      "annualized_volatility": 0.628893,
+      "sharpe": -0.168646,
+      "sortino": -0.191253,
+      "max_drawdown": -1.209773,
+      "calmar": NaN,
+      "spearman_ic": NaN,
+      "pearson_ic": NaN,
+      "ic_tstat": NaN,
+      "hit_rate": 0.416667,
+      "p_value": 0.60124,
+      "newey_west_tstat": NaN,
+      "bootstrap_ci_low": -0.135848,
+      "bootstrap_ci_high": 0.06566,
+      "turnover": NaN,
+      "average_names_held": 3.19,
+      "concentration_hhi": 0.369213,
+      "portfolio_beta": -0.7283,
+      "sector_beta": -0.0824,
+      "oil_beta": -0.3351,
+      "gas_beta": NaN,
+      "size_exposure": NaN,
+      "value_exposure": NaN,
+      "leverage_exposure": NaN,
+      "momentum_exposure": NaN,
       "bid_ask_cost": 5.0,
       "short_borrow_cost": 50.0,
-      "slippage": 10.0,
-      "average_filing_delay_days": 2.0,
-      "failed_extraction_rate": 0.005
+      "slippage": NaN,
+      "average_filing_delay_days": NaN,
+      "failed_extraction_rate": 0.0
     }
   ]
 }

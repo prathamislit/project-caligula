@@ -1,16 +1,31 @@
-"""Execute scoring pipeline and generate canonical ranking outputs."""
+"""Execute scoring pipeline and generate canonical ranking outputs.
+
+Consumes the real backtest score panel (data/scores/all_scores.parquet,
+produced by run_backtest.py / src.backtest.score_history) and writes the
+canonical quarterly tables. No sample or placeholder data.
+"""
+
+import csv
 
 import pandas as pd
-import csv
-from caligula.scoring.composite import compute_composite
-from caligula.config import TABLES_DIR
+from caligula.config import DATA_DIR, TABLES_DIR
+from caligula.errors import CaligulaDataError
+
+SCORES_PANEL = DATA_DIR / "scores" / "all_scores.parquet"
+
+_PILLAR_COLS = [
+    "unit_economics_score",
+    "capital_discipline_score",
+    "balance_sheet_score",
+    "hedge_book_score",
+    "reserves_score",
+    "operational_score",
+    "sentiment_score",
+    "macro_sensitivity_score",
+]
 
 
-def run_scoring_pipeline():
-    # In a real run, this would load point-in-time universe data and extracted data.
-    # We will generate the required tables.
-
-    # Generate pillar methodology
+def _write_methodology_table():
     methodology_path = TABLES_DIR / "pillar_methodology.csv"
     methodology_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -52,27 +67,43 @@ def run_scoring_pipeline():
         )
         # Other pillars can be added similarly.
 
-    # Sample pipeline run
-    df = pd.DataFrame(
-        {
-            "ticker": ["EOG", "FANG", "PXD", "CTRA"],
-            "quarter": ["2026-03-31"] * 4,
-            "pct_oil_hedged_ntm": [0.52, 0.40, 0.10, 0.60],
-            "weighted_floor": [62.0, 55.0, 40.0, 65.0],
-            "tier1_years": [15.0, 12.0, 10.0, 8.0],
-            "fd_cost_per_boe": [10.0, 12.0, 15.0, 14.0],
-            "cash_opex_per_boe": [6.0, 7.0, 9.0, 8.0],
-        }
+
+def load_score_panel() -> pd.DataFrame:
+    """Load the real quarterly score panel produced by the backtest pipeline."""
+    if not SCORES_PANEL.exists():
+        raise CaligulaDataError(
+            f"Score panel not found at {SCORES_PANEL}. "
+            "Run `python run_backtest.py` first to generate real scores."
+        )
+    df = pd.read_parquet(SCORES_PANEL)
+    if df.empty or "caligula_score" not in df.columns:
+        raise CaligulaDataError(f"Score panel at {SCORES_PANEL} is empty or malformed.")
+    return df
+
+
+def run_scoring_pipeline():
+    """Write canonical ranking tables from the real score panel."""
+    _write_methodology_table()
+
+    panel = load_score_panel()
+    panel = panel.copy()
+    panel["quarter"] = pd.to_datetime(panel["quarter"])
+
+    # Rank within each quarter (1 = highest composite score)
+    panel["rank"] = (
+        panel.groupby("quarter")["caligula_score"]
+        .rank(ascending=False, method="min")
     )
+    panel = panel.sort_values(["quarter", "rank"])
 
-    scores = compute_composite(df)
+    pillar_cols = [c for c in _PILLAR_COLS if c in panel.columns]
+    base_cols = ["ticker", "quarter"] + pillar_cols + ["caligula_score", "rank", "tier"]
 
-    # Save outputs
-    scores.to_csv(TABLES_DIR / "pillar_scores_quarterly.csv", index=False)
-    scores[["ticker", "quarter", "caligula_score", "rank", "tier"]].to_csv(
+    panel[base_cols].to_csv(TABLES_DIR / "pillar_scores_quarterly.csv", index=False)
+    panel[["ticker", "quarter", "caligula_score", "rank", "tier"]].to_csv(
         TABLES_DIR / "composite_scores_quarterly.csv", index=False
     )
-    scores[["ticker", "quarter", "rank", "tier"]].to_csv(
+    panel[["ticker", "quarter", "rank", "tier"]].to_csv(
         TABLES_DIR / "rankings_quarterly.csv", index=False
     )
 
