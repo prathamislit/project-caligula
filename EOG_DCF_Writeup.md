@@ -6,7 +6,7 @@
 
 ## 1. Executive Summary & Narrative Chain
 
-Project Caligula’s systematic 8-pillar SEC-footnote engine flagged **EOG Resources, Inc. (NYSE: EOG)** as a top-quartile fundamental quality name within the 14-ticker Permian Basin exploration and production (E&P) universe (composite score: **0.640**, rank: **2/14**). This institutional DCF overlays that quantitative screen to address a critical question: **is the market already pricing in EOG’s premium operational quality, or is there an active mispricing to underwrite?**
+Project Caligula’s systematic 5-pillar screening engine (v2; the internal codebase retains additional v1 scoring modules) flagged **EOG Resources, Inc. (NYSE: EOG)** as a top-quartile fundamental quality name within the 14-ticker Permian Basin exploration and production (E&P) universe (composite score: **0.640**, rank: **2/14**). This institutional DCF overlays that quantitative screen to address a critical question: **is the market already pricing in EOG’s premium operational quality, or is there an active mispricing to underwrite?**
 
 Based on our linked three-statement projection model under a WACC of **8.77%**, EOG's intrinsic equity value is **$149.60 per share** under the reserve-life depletion terminal value method and **$143.10 per share** under the exit multiple method. The current market price of **$141.22** implies that the market is pricing in a highly conservative long-run WTI price of **$68.50/bbl** (compared to the current front-month strip of **$72.00/bbl**), leaving a margin of safety for fundamental investors.
 
@@ -53,3 +53,7 @@ Our valuation model is built from three distinct quantitative schedules, ensurin
 ## 4. Conclusion
 
 The DCF valuation supports Project Caligula’s top-quartile screen. EOG’s fundamental quality—characterized by robust hedging protection, premium geology, and superior cost control—is largely priced in by the market, with a slight margin of safety. We recommend placing EOG on a **Watchlist / Mildly Undervalued** status, targeting an intrinsic valuation of **$149.60 per share** (implied **5.9%** upside).
+
+---
+
+*This repository is for educational and research demonstration purposes only. It is not investment advice, a trading recommendation, or a solicitation to buy or sell securities.*

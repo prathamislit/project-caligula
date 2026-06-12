@@ -42,6 +42,8 @@ The framework evaluates the point-in-time active universe across 18 separate met
 
 ## Backtest Design & Performance
 
+> **Disclaimer:** This repository is for educational and research demonstration purposes only. It is not investment advice, a trading recommendation, or a solicitation to buy or sell securities.
+
 The strategy implements a quarterly rebalanced long/short portfolio:
 
 * **Universe:** Permian-weighted E&P names defined in `config/universe.yaml`, evaluated point-in-time using active listing windows. Delisted/acquired names such as CPE, CXO, CIVI, VTLE, and PXD are represented in the universe ledger only during their active periods.
@@ -78,7 +80,7 @@ The current real-pipeline backtest is negative. These results should be interpre
 
 1. **LLM extraction fallback:** Without `GEMINI_API_KEY` configured locally, hedge book, reserve, and unit-economics fields may use deterministic statistical fallback values rather than fully extracted filing data. These fallback values are tagged and are not cached as real extraction results.
 
-2. **Delisted ticker price gaps:** yfinance does not provide full historical data for some delisted or acquired names such as PXD and VTLE. Those gaps can create residual survivorship bias until delisting returns or a survivorship-bias-free price source is added.
+2. **Delisted ticker price gaps:** The universe is point-in-time, but residual survivorship bias remains where free yfinance data lacks complete delisted ticker histories (e.g. PXD and VTLE), until delisting returns or a survivorship-bias-free price source is added.
 
 3. **Simulated comparison universe:** The General Corporate comparison remains simulated and should not be interpreted as a real benchmark. Public performance discussion should rely on real benchmarks such as XOP, SPY, or a properly constructed point-in-time comparison universe.
 
@@ -125,6 +127,9 @@ This is documented transparently because hiding it would compromise the framewor
 ---
 
 ## 📊 Elite Diligence Overlay: EOG Resources 3-Statement DCF Model
+
+> **Disclaimer:** This repository is for educational and research demonstration purposes only. It is not investment advice, a trading recommendation, or a solicitation to buy or sell securities.
+
 To validate systematic "top-quartile fundamental quality" signals flagged by the Caligula engine, we construct an audit-traceable, **three-statement linked DCF model for EOG Resources, Inc. (NYSE: EOG)**.
 
 ### Model Features
