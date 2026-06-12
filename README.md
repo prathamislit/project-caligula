@@ -40,20 +40,49 @@ The framework evaluates the point-in-time active universe across 18 separate met
 
 ---
 
-## 📈 Backtest Design & Performance
+## Backtest Design & Performance
 
-The strategy implements a quarterly rebalanced Long/Short portfolio:
-- **Universe:** 13 Permian-weighted E&P names. Evaluated point-in-time to eliminate look-ahead and survivorship bias (delisted/acquired names CPE, CXO, CIVI, VTLE, PXD are held only during their active periods).
-- **Execution:** Long top-quartile names (Tier A/B), short bottom-quartile names (Tier C/D), equal-weighted.
-- **Reporting Lag:** Incorporates a strict 90-day lag on SEC regulatory filings to ensure data is point-in-time and was actually available to the public.
-- **Failed-Download Cache:** Built-in resilience caches delisted tickers as empty Parquet markers to prevent redundant slow API requests.
+The strategy implements a quarterly rebalanced long/short portfolio:
 
-### Key Performance Metrics (2014-2025)
-- **Annualized L/S Return:** `-7.9%` (Benchmark comparison and baseline short volatility risk).
-- **Annualized Volatility:** `20.6%`
-- **Sharpe Ratio:** `-0.384`
-- **Maximum Drawdown:** `-28.1%`
-- **Quarterly Hit Rate:** `37.5%`
+* **Universe:** Permian-weighted E&P names defined in `config/universe.yaml`, evaluated point-in-time using active listing windows. Delisted/acquired names such as CPE, CXO, CIVI, VTLE, and PXD are represented in the universe ledger only during their active periods.
+* **Execution:** Long top-ranked names and short bottom-ranked names using equal-weighted portfolio construction.
+* **Reporting Lag:** Applies a strict 90-day lag to SEC regulatory filings so scoring uses only information that would have been publicly available at the rebalance date.
+* **Data Sources:** SEC EDGAR/XBRL, FRED, EIA, and yfinance price data.
+* **Pipeline Status:** The backtest now uses real price-based return calculations and a regenerated performance ledger. Earlier placeholder performance claims have been removed.
+
+### Latest Real-Pipeline Performance Ledger
+
+The current real-pipeline backtest is negative. These results should be interpreted as audited research infrastructure, not as a validated profitable trading strategy.
+
+| Metric                       | Latest Ledger Value |
+| ---------------------------- | ------------------: |
+| Long leg cumulative return   |            `-24.4%` |
+| Short leg cumulative return  |            `115.6%` |
+| Long/short cumulative return |           `-119.0%` |
+| Benchmark cumulative return  |            `-14.6%` |
+| Excess return vs benchmark   |           `-104.3%` |
+| Annualized volatility        |             `62.9%` |
+| Sharpe ratio                 |            `-0.169` |
+| Sortino ratio                |            `-0.191` |
+| Maximum drawdown             |           `-121.0%` |
+| Quarterly hit rate           |             `41.7%` |
+| p-value                      |             `0.601` |
+| Average names held           |              `3.19` |
+| Portfolio beta vs SPY        |            `-0.728` |
+| Sector beta vs XOP           |            `-0.082` |
+| Oil beta vs WTI proxy        |            `-0.335` |
+
+**Interpretation:** The current configuration does not show a profitable or statistically validated long/short strategy. The main value of the project at this stage is the reproducible, point-in-time research pipeline: fake sample rankings, placeholder returns, and fabricated performance metrics have been replaced with traceable outputs from real price data and explicit caveats.
+
+### Remaining Caveats
+
+1. **LLM extraction fallback:** Without `GEMINI_API_KEY` configured locally, hedge book, reserve, and unit-economics fields may use deterministic statistical fallback values rather than fully extracted filing data. These fallback values are tagged and are not cached as real extraction results.
+
+2. **Delisted ticker price gaps:** yfinance does not provide full historical data for some delisted or acquired names such as PXD and VTLE. Those gaps can create residual survivorship bias until delisting returns or a survivorship-bias-free price source is added.
+
+3. **Simulated comparison universe:** The General Corporate comparison remains simulated and should not be interpreted as a real benchmark. Public performance discussion should rely on real benchmarks such as XOP, SPY, or a properly constructed point-in-time comparison universe.
+
+4. **Negative current result:** The latest real-return backtest should not be marketed as alpha evidence. It is better framed as an honest audit upgrade: the system now exposes where the strategy fails instead of hiding weakness behind placeholder metrics.
 
 ---
 
